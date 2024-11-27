@@ -1,0 +1,21 @@
+:root 
+{
+    --colors-primary: #A6D760; /* Replace with your desired color */
+    --colors-color1: #FFFFFF;
+    --colors-color2: #203238;
+    --colors-color4: #EDEDED;
+    --colors-color5: #587278;
+    --colors-light: #FFFFFF;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pageButton
+{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+}
