@@ -3,10 +3,18 @@
     import teaser from '$lib/assets/images/TeaserImage.png';
 </script>
 
-<div>
-    <img alt="Cubic Cube" src={teaser} />
+<div class="pageWrapper">
+    <div>
+    </div>
 </div>
 
+
 <style>
-    
+    .pageWrapper
+    {
+        background: url("$lib/assets/images/TeaserImage.png") no-repeat;
+        background-size: 100%;
+        width: 100%;
+        height: 800px;
+    }
 </style>

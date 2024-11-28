@@ -1,10 +1,13 @@
 :root 
 {
-    --colors-primary: #A6D760; /* Replace with your desired color */
+    --colors-primary: #A6D760;
+    --colors-secondary: #BAD98C;
     --colors-color1: #FFFFFF;
     --colors-color2: #203238;
+    --colors-color3: #DE995B;
     --colors-color4: #EDEDED;
     --colors-color5: #587278;
+    
     --colors-light: #FFFFFF;
 
     font-family: "Roboto", sans-serif;
@@ -12,10 +15,112 @@
     font-style: normal;
 }
 
-.pageButton
+.pageContent 
 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    max-width: 1400px;
+    width: 100%;
+    display: block;
+    padding: 50px;
+}
+
+.pageWrapper {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: var(--colors-color2);
+    overflow: hidden;
+}
+
+.largeHeadline
+{
+    margin-top: 10px;
+}
+
+
+/* 
+    FONT STYLES
+*/
+
+.fontStyleH2
+{
+    line-height: normal;
+    line-height: 84.22px;
+    font-size: 72px;
+    letter-spacing: 2%;
+    font-weight: 300;
+}
+
+.fontStyleH3
+{
+    line-height: normal;
+    line-height: 49.22px;
+    font-size: 42px;
+    letter-spacing: 2%;
+    font-weight: 200;
+}
+
+.fontStyleH4
+{
+    line-height: 39.84px;
+    font-size: 34px;
+    font-weight: 300;
+}
+
+
+.fontStyleH5
+{
+    line-height: normal;
+    font-size: 24px;
+    letter-spacing: 2%;
+}
+
+.fontStyleH6
+{
+    line-height: normal;
+    line-height: 28.13px;
+    font-size: 24px;
+    letter-spacing: 2%;
+    font-weight: 600;
+}
+
+.fontStyleP
+{
+    line-height: 24px;
     font-size: 17px;
+    letter-spacing: 0;
+}
+
+
+/* 
+    FONT COLORS
+*/
+
+.fontColorC3
+{
+    color: var(--colors-color3);
+}
+
+.fontColorLight
+{
+    color: var(--colors-light);
+}
+
+.fontColorPrimary
+{
+    color: var(--colors-primary);
+}
+
+
+/* 
+    BACKGROUND COLORS
+*/
+
+.backgroundColor5
+{
+    background-color: var(--colors-color5);
+}
+
+.backgroundColorSecondary
+{
+    background-color: var(--colors-secondary);
 }

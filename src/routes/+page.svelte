@@ -2,29 +2,32 @@
     import Header from './SectionHeader.svelte';
     import Teaser from './SectionTeaser.svelte';
     import Highlight from './SectionHighlight.svelte';
+    import AboutUs from './AboutUs.svelte';
+    import OurService from './OurService.svelte';
     import '../css/global.css';
+	import Cta from './CTA.svelte';
+	import SpecialCars from './SpecialCars.svelte';
+	import Testemonials from './Testemonials.svelte';
+    import Team from './Team.svelte';
+	import WhyChooseUs from './WhyChooseUs.svelte';
+	import Footer from './Footer.svelte';
 </script>
 
-<div class="pageWrapper">
-    <div class="pageContent">
-        <Header></Header>
-        <Teaser></Teaser>
-        <Highlight></Highlight>
-    </div>
-</div>
+
+<Header customClass=""></Header>
+<Teaser></Teaser>
+<Highlight customClass=""></Highlight>
+<AboutUs customClass=""></AboutUs>
+<OurService customClass=""></OurService> 
+<Cta buttonContext="Jetzt entdecken!" buttonLink="/jetzt-entdecken.html" content="Die Idee, eines modularen Koffers war so bestechend, dass wir ihn bauen mussten."></Cta>
+<SpecialCars customClass=""></SpecialCars>
+<Testemonials></Testemonials>
+<Team></Team>
+<Cta content="Unser Anspruch ist es, die Zukunft mit innovativen Ideen zu gestalten und den Anforderungen des Marktes einen Schritt voraus zu sein." subtext="Frank Rittmann, Geschäftsführer"></Cta>
+<WhyChooseUs></WhyChooseUs>
+<Footer></Footer>
+
 
 <style>
-    .pageWrapper {
-        display: flex;             /* Enable Flexbox */
-        justify-content: center;   /* Center content horizontally */
-        min-height: 100vh;         /* Ensure full viewport height */
-        box-sizing: border-box;    /* Include padding in width calculation */
-        background-color: var(--colors-color2);
-    }
-
-    /* Actual content box */
-    .pageContent {
-        max-width: 1400px;         /* Limit content width */
-        width: 100%;               /* Allow the content to shrink on smaller screens */
-    }
+    
 </style>

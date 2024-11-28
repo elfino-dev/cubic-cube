@@ -1,42 +1,81 @@
 <script lang="ts">
     import '../css/global.css';
-    import teaser from '$lib/assets/images/TeaserImage.png';
 
     let { title, body, icon } = $props();
+    let isHighlighted = $state(false);
 </script>
 
-<div class="sectionHightlightBox">
-    <img alt="{title}" src={icon}/>
-    <h1>{title}</h1>
-    <span>{body}</span>
+<div 
+    class="sectionHightlightBox {isHighlighted ? 'sectionHightlightBoxHighlighted' : ''}" 
+    onmouseenter={() => isHighlighted = true }
+    onmouseleave={() => isHighlighted = false }
+    aria-pressed={isHighlighted} 
+    role="button"
+    tabindex="0">
+    <div>
+        <div>
+            <svelte:component this={icon} isHighlighted={isHighlighted} />
+        </div>
+        <h1 class="fontStyleH5">{title}</h1>
+        <span class="fontStyleP highlightBoxBody">{body}</span>
+    </div>
 </div>
 
 <style>
 
-    .sectionHightlightBox > *
+    .sectionHightlightBox
+    {
+        color: var(--colors-color4);
+        transition: all 500ms ease;
+    }
+
+    .sectionHightlightBox > div
+    {
+        width: 236pt;
+        margin: 10px auto;
+    }
+
+    .sectionHightlightBox.sectionHightlightBoxHighlighted
+    {
+        margin-top: -30pt;
+        margin-bottom: -30pt;
+        background-color: var(--colors-primary);
+        color: var(--colors-color2);
+        border-radius: 35pt;
+    }
+
+    .sectionHightlightBox > div > *
     {
         margin: 0 auto;
         text-align: center;
-        display: block; 
-        vertical-align: middle; 
+        display: block;
         text-align: center; 
     }
 
-    .sectionHightlightBox img
+    .sectionHightlightBox > div > div
     {
-
+        margin-top:50pt;
     }
 
-    .sectionHightlightBox h1
+    .sectionHightlightBox > div > h1
     {
-        font-size: 24px;
-        color: var(--colors-color4);
+        margin-top: 10pt;
     }
 
-    .sectionHightlightBox span
+    .sectionHightlightBox > div > span
     {
-        font-size: 17x;
-        line-height: 24px;
-        color: var(--colors-color4);
+        margin-top: 20pt;
+    }
+
+    .highlightBoxBody
+    {
+        opacity: 0;
+        transition: all 500ms ease;
+    }
+
+    .sectionHightlightBoxHighlighted .highlightBoxBody
+    {
+        opacity: 1;
+        overflow: visible;
     }
 </style>
