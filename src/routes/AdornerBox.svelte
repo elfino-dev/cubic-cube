@@ -1,8 +1,8 @@
 <script>   
-    let { customStyle = '' } = $props();
+    let { customStyle = '', customClass = '' } = $props();
 </script>
 
-<div class="adornerBox" style="{customStyle}"></div>
+<div class="adornerBox {customClass}" style="{customStyle}"></div>
 
 <style>
     .adornerBox

@@ -3,7 +3,31 @@
     import CarConfigurationBox  from './CarConfigurationBox.svelte';
     import AdornerBox  from './AdornerBox.svelte';
     import car from '$lib/assets/OurServices/car.png';
+
+    import { onMount } from 'svelte';
+    import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';    
+
+    onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+		gsap.to('.box1', {
+            scrollTrigger: 
+            {
+                trigger: '.box1',
+                start: "center bottom",
+                end: "top center",
+                markers: true,
+                toggleActions: "restart pause reverse pause",
+                scrub: 0.5
+            },
+            bottom: 200,
+            right: 333,
+            opacity: 1
+        });
+	});
+
     let { customClass = '' } = $props();
+    
 </script>
 
 <div class="pageWrapper">
@@ -13,7 +37,7 @@
             <p class="fontStyleH3 fontColorLight largeHeadline">Die Kofferlösung für Rohrreiniggungs- und Inspektionsfahrzeuge</p>
 
             <div class="grid grid-cols-3 gap-6 carConfigurationGrid">
-                <AdornerBox customStyle="position: absolute; bottom: 100px; right: 300px;"></AdornerBox>
+                <AdornerBox customClass="box1" customStyle="position: absolute; bottom: 100px; right: 300px; opacity: 0"></AdornerBox>
                 <AdornerBox customStyle="position: absolute; bottom: 100px; right: 100px;"></AdornerBox>
                 <AdornerBox customStyle="position: absolute; bottom: -100px; right: -100px;"></AdornerBox>
                 <AdornerBox customStyle="position: absolute; bottom: -100px; right: 100px;"></AdornerBox>
