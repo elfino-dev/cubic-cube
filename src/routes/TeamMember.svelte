@@ -17,6 +17,11 @@
 </div>
 
 <style>
+    .teamMember
+    {
+        min-height: 550px;
+    }
+
     .spacer
     {
         height: 250px;
@@ -30,15 +35,22 @@
         height: 200px;
         position: relative;
         transition: all 0.2s ease-in-out;
+
+        
+        align-items: center;
+        justify-content: center;
+        display: flex;
     }
 
     .backgroundBar .teamImage
     {
-        height: 450px;
+        margin: 0 auto;
+        aspect-ratio: 1 / 1;
         position: absolute;
         bottom: 0;
         left: auto;
         right: auto;
+        max-width: 450px; 
         width: 100%;
         background-position: 50% 101%;
         background-size: 90%;

@@ -32,13 +32,5 @@ Die Marke bedeutet übersetzt ”Kubikwürfel“ und symbolisiert die Vereinigun
     {
         position: relative; /* to block previous square*/
     }
-
-    .buttonWrapper{
-        display: flex;
-        justify-content: center;
-        box-sizing: border-box;
-        background-color: var(--colors-color2);
-        padding-top:50px;
-    }
     
 </style>

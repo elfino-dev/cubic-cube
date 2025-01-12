@@ -12,11 +12,11 @@
             <div class="align-middle">
                 <img alt="Cubic Cube" src={logo} />
             </div>
-            <div class="align-middle pageButton">Home</div>
-            <div class="align-middle pageButton">Über uns</div>
-            <div class="align-middle pageButton">Produkte</div>
-            <div class="align-middle pageButton">Team</div>
-            <div class="align-middle pageButton">Kontakt</div>
+            <a class="align-middle pageButton" href="/">Home</a>
+            <a class="align-middle pageButton" href="#aboutUs">Über uns</a>
+            <a class="align-middle pageButton" href="/produkte">Produkte</a>
+            <a class="align-middle pageButton" href="#team">Team</a>
+            <a class="align-middle pageButton" href="/kontakt">Kontakt</a>
             <div class="align-middle">
                 <Button>Jetzt beraten lassen</Button>
             </div>
@@ -35,6 +35,7 @@
         height: 91px; 
     }
 
+    .headerGrid > a,
     .headerGrid > div
     {
         margin: auto;

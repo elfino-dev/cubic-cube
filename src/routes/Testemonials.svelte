@@ -3,6 +3,45 @@
     import AdornerBox from './AdornerBox.svelte';
     
     let { customClass = '' } = $props();
+
+    import { onMount } from 'svelte';
+    import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';    
+
+    onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+		gsap.to('.box1Testemonials', {
+            scrollTrigger: 
+            {
+                trigger: '.box1Testemonials',
+                start: "top 70%",
+                end: "bottom 30%",
+                toggleActions: "restart pause reverse pause",
+                scrub: 0.1
+            },
+            bottom: 350,
+            right: 300,
+            opacity: 1,
+            rotate : -45,
+        });
+
+        gsap.to('.box2Testemonials', {
+            scrollTrigger: 
+            {
+                trigger: '.box2Testemonials',
+                start: "top 100%",
+                end: "bottom 50%",
+                toggleActions: "restart pause reverse pause",
+                scrub: 0.1
+            },
+            bottom: -150,
+            right: -100,
+            width: 500,
+            height: 500,
+            opacity: 1,
+            rotate : -45, 
+        });
+	});
 </script>
 
 <div class="pageWrapper backgroundColor5"> 
@@ -11,8 +50,8 @@
             <p class="fontStyleH6 fontColorC3 smallHeadline">Kundenstimmen</p>
             <p class="fontStyleH3 fontColorLight largeHeadline">Innovation, Begeisterung & Anerkennung</p>
 
-            <AdornerBox customStyle="position: absolute; bottom: 350px; right: 300px;transform: rotate(-45deg); background-color: var(--colors-color2); border-width: 0"></AdornerBox>
-            <AdornerBox customStyle="width: 500px; height: 500px; position: absolute; bottom: -150px; right: -100px;transform: rotate(-45deg); border-color: var(--colors-color3)"></AdornerBox>
+            <AdornerBox customClass="box1Testemonials" customStyle="position: absolute; bottom: 150px; right: 100px;transform: rotate(45deg); background-color: var(--colors-color2); border-width: 0; opacity: 0"></AdornerBox>
+            <AdornerBox customClass="box2Testemonials" customStyle="width: 200px; height: 200px; position: absolute; bottom: -150px; right: 300px;transform: rotate-45deg); border-color: var(--colors-color3); opacity: 0"></AdornerBox>
 
             <div class="frameWrapper">
                 <div class="grid grid-cols-2 testemonialGrid">

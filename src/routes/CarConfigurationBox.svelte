@@ -52,7 +52,6 @@
     .carBuzzwords, 
     .carDescription
     {
-        width: 351px;
         margin: 0 auto;
     }
 

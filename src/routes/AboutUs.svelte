@@ -4,39 +4,76 @@
     import Arrow from '$lib/assets/images/Common/Arrow.svelte';
     
     let { customClass = '' } = $props();
+
+    import { onMount } from 'svelte';
+    import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';    
+
+    onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+		gsap.to('.aboutUsCar', {
+            scrollTrigger: 
+            {
+                trigger: '.aboutUsCar',
+                start: "center 90%",
+                end: "center 50%",
+                toggleActions: "restart pause reverse pause",
+                scrub: 0.1
+            },
+            left:100,
+            opacity: 1
+        });
+
+        gsap.to('.aboutUsCarBorder', {
+            scrollTrigger: 
+            {
+                trigger: '.aboutUsCarBorder',
+                start: "center 90%",
+                end: "center 50%",
+                toggleActions: "restart pause reverse pause",
+                scrub: 0.1
+            },
+            left:100,
+            opacity: 1
+        });
+	});
 </script>
 
-<div class="pageWrapper">
-    <div class="pageContent">
-        <div class="grid grid-cols-2">
-            <div class="aboutUs">
-                <p class="fontStyleH6 fontColorC3 smallHeadline">CubicCube ist einzigartig</p>
-                <p class="fontStyleH3 fontColorLight largeHeadline">Flexible Lösungen durch modulare Bauweise</p>
-            
-                <div class="fontColorLight description">
-                    <b>Ob für kurze, mittlere oder lange Radstände:</b><br/>
-                    Unsere Module sind auf jedes Fahrgestell adaptierbar und bieten vielseitige Einsatzmöglichkeiten.<br/><br/>
-                    Durch die <b>modulare</b> Konstruktion wird der vorhandene Raum optimal genutzt, was individuelle Lösungen für verschiedenste Branchen und Einsatzzwecke ermöglicht.
-                </div>
-
-                <div class="grid grid-cols-2 buzzwords fontColorLight fontStyleP">  
-                    <p>Modularität & Anpassungsfähigkeit</p>
-                    <p>Nachhaltigkeit</p>
-                    <p>Kurze Lieferzeiten</p>
-                    <p>Innovative Technologien</p>
-                </div>
-                <div class="buttonWrapper">
-                    <Button>Mehr erfahren <Arrow></Arrow></Button>
-                </div>
+<section id="aboutUs">
+    <div class="pageWrapper">
+        <div class="pageContent">
+            <div class="grid grid-cols-1 xl:grid-cols-5">
+                <div class="aboutUs xl:col-span-3">
+                    <p class="fontStyleH6 fontColorC3 smallHeadline">CubicCube ist einzigartig</p>
+                    <p class="fontStyleH3 fontColorLight largeHeadline">Flexible Lösungen durch modulare Bauweise</p>
                 
-            </div>
-            <div class="carWrapper">
-                <div class="car">
+                    <div class="fontColorLight description">
+                        <b>Ob für kurze, mittlere oder lange Radstände:</b><br/>
+                        Unsere Module sind auf jedes Fahrgestell adaptierbar und bieten vielseitige Einsatzmöglichkeiten.<br/><br/>
+                        Durch die <b>modulare</b> Konstruktion wird der vorhandene Raum optimal genutzt, was individuelle Lösungen für verschiedenste Branchen und Einsatzzwecke ermöglicht.
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 buzzwords fontColorLight fontStyleP">  
+                        <p>Modularität & Anpassungsfähigkeit</p>
+                        <p>Nachhaltigkeit</p>
+                        <p>Kurze Lieferzeiten</p>
+                        <p>Innovative Technologien</p>
+                    </div>
+                    <div class="buttonWrapper">
+                        <Button>Mehr erfahren <Arrow></Arrow></Button>
+                    </div>
+                    
+                </div>
+                <div class="carWrapper xl:col-span-2" >
+                    <div class="aboutUsCar">
+                    </div>
+                    <div class="aboutUsCarBorder">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 
 <style>
@@ -75,7 +112,7 @@
         width: 20px;
         height: 20px;
         float: left;
-        margin: 0 6px 0 0;
+        margin: 0 6px 0 0; 
     }
     
     .aboutUs .buttonWrapper
@@ -83,36 +120,85 @@
         margin-top:50px;
     }
 
-    @keyframes fade-in{
-        0%
-        {
-            scale: 0.8; opacity: 0;
-        }
-        30%{
-            scale: 1; opacity: 0.1;
-        }
-    }
-
     .carWrapper
     {
         display: flex;
-        animation: fade-in linear;
-        animation-timeline: view(0% 0%, 100% 100%);  
+        position: relative;
     }
-    
-    .car
-    {
-        height: calc(100% * 0.8);
-        aspect-ratio: 1 / 1;
 
-        background: url("$lib/assets/images/AboutUs/AboutUsCar.png") no-repeat;
-        background-size: 85% 85%;
-        background-position: 50% 50%;
+    @media (min-width: 1280px) 
+    {    
+        .aboutUsCar
+        {
+            height: calc(100% * 0.8);
+            aspect-ratio: 1 / 1;     
+            
+            transform: rotate(45deg);
+            margin: auto;
 
-        border: 7px solid var(--colors-primary);
-        border-radius: 100px;
-        transform: rotate(45deg);
-        margin: auto;
+            position: absolute;
+            border: 7px solid var(--colors-primary);
+            border-radius: 100px;
+            left: 300px;
+            opacity: 0;
+        }
+
+        .aboutUsCarBorder
+        {
+            height: calc(100% * 0.8);
+            aspect-ratio: 1 / 1;     
+            
+            transform: rotate(45deg);
+            margin: auto;
+
+            position: absolute;
+            left: -100px;
+            opacity: 0;
+
+            background: url("$lib/assets/images/AboutUs/AboutUsCar.png") no-repeat;
+            background-size: 85% 85%;
+            background-position: 50% 50%;
+        }
+    }
+
+    @media (max-width: 1279px) 
+    {    
+        .carWrapper{
+            top:60px;
+            height: 579px;
+        }
+
+        .aboutUsCar
+        {
+            height: calc(100% * 0.8);
+            aspect-ratio: 1 / 1;     
+            
+            transform: rotate(45deg);
+            margin: auto;
+
+            position: absolute;
+            border: 7px solid var(--colors-primary);
+            border-radius: 100px;
+            left: 300px;
+            opacity: 0;
+        }
+
+        .aboutUsCarBorder
+        {
+            height: calc(100% * 0.8);
+            aspect-ratio: 1 / 1;     
+            
+            transform: rotate(45deg);
+            margin: auto;
+
+            position: absolute;
+            left: -100px;
+            opacity: 0;
+
+            background: url("$lib/assets/images/AboutUs/AboutUsCar.png") no-repeat;
+            background-size: 85% 85%;
+            background-position: 50% 50%;
+        }
     }
 
     

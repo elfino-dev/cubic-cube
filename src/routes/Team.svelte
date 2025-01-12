@@ -10,24 +10,26 @@
     let { customClass = '' } = $props();
 </script>
 
-<div class="pageWrapper"> 
-    <div class="pageContent">
-        <div class="specialCars">
-            <p class="fontStyleH6 fontColorC3 smallHeadline">Unser Team</p>
-            <p class="fontStyleH3 fontColorLight largeHeadline">Die Experten für hochwertige Fahrzeugauf- und innenausbauten</p>
-            
-            <div class="grid grid-cols-3 gap-6 carConfigurationGrid">
-                <TeamMember name="Max Musterman" position="" teamMemberImage={max}/>
-                <TeamMember name="Frank Rittmann" position="Geschäftsführer" teamMemberImage={frank}/>
-                <TeamMember name="Ena Vasilj" position="Werksstudentin"  teamMemberImage={ena}/>
-            </div>
+<section id="team">
+    <div class="pageWrapper"> 
+        <div class="pageContent">
+            <div class="specialCars">
+                <p class="fontStyleH6 fontColorC3 smallHeadline">Unser Team</p>
+                <p class="fontStyleH3 fontColorLight largeHeadline">Die Experten für hochwertige Fahrzeugauf- und innenausbauten</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 carConfigurationGrid">
+                    <TeamMember name="Max Musterman" position="" teamMemberImage={max}/>
+                    <TeamMember name="Frank Rittmann" position="Geschäftsführer" teamMemberImage={frank}/>
+                    <TeamMember name="Ena Vasilj" position="Werksstudentin"  teamMemberImage={ena}/>
+                </div>
 
-            <div class="buttonWrapper">
-                <Button customStyle="background-color: var(--colors-color3);">Das CubicCube-Team</Button>
-            </div>            
+                <div class="buttonWrapper">
+                    <Button customStyle="background-color: var(--colors-color3);">Das CubicCube-Team</Button>
+                </div>            
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <style>
     .pageWrapper

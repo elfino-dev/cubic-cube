@@ -13,21 +13,27 @@
 	import Footer from './Footer.svelte';
 </script>
 
-
-<Header customClass=""></Header>
-<Teaser></Teaser>
-<Highlight customClass=""></Highlight>
-<AboutUs customClass=""></AboutUs>
-<OurService customClass=""></OurService> 
-<Cta buttonContext="Jetzt entdecken!" buttonLink="/jetzt-entdecken.html" content="Die Idee, eines modularen Koffers war so bestechend, dass wir ihn bauen mussten."></Cta>
-<SpecialCars customClass=""></SpecialCars>
-<Testemonials></Testemonials>
-<Team></Team>
-<Cta content="Unser Anspruch ist es, die Zukunft mit innovativen Ideen zu gestalten und den Anforderungen des Marktes einen Schritt voraus zu sein." subtext="Frank Rittmann, Geschäftsführer"></Cta>
-<WhyChooseUs></WhyChooseUs>
-<Footer></Footer>
-
+<div class="contentWrapper">
+    <div class="content">
+        <Header customClass=""></Header>
+        <Teaser></Teaser>
+        <Highlight customClass=""></Highlight>
+        <AboutUs customClass=""></AboutUs>
+        <OurService customClass=""></OurService> 
+        <Cta buttonContext="Jetzt entdecken!" buttonLink="/jetzt-entdecken.html" content="Die Idee, eines modularen Koffers war so bestechend, dass wir ihn bauen mussten."></Cta>
+        <SpecialCars customClass=""></SpecialCars>
+        <Testemonials></Testemonials>
+        <Team></Team>
+        <Cta content="Unser Anspruch ist es, die Zukunft mit innovativen Ideen zu gestalten und den Anforderungen des Marktes einen Schritt voraus zu sein." subtext="Frank Rittmann, Geschäftsführer"></Cta>
+        <WhyChooseUs></WhyChooseUs>
+    </div>
+    <div class="footer">
+        <Footer></Footer>
+    </div>
+</div>
 
 <style>
-    
+    .contentWrapper{
+        background: linear-gradient(311.26deg, #203238 59.55%, #41707F 118.4%) !important;
+    }
 </style>

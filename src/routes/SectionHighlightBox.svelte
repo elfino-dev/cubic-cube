@@ -1,8 +1,10 @@
 <script lang="ts">
     import '../css/global.css';
 
-    let { title, body, icon } = $props();
-    let isHighlighted = $state(false);
+    let { title, body, icon, isHighlightedByDefault = false } = $props();
+    let isHighlighted = $state(isHighlightedByDefault);
+
+    
 </script>
 
 <div 
@@ -12,49 +14,50 @@
     aria-pressed={isHighlighted} 
     role="button"
     tabindex="0">
+
+    <div class="highlightBoxIcon">
+        <svelte:component this={icon} isHighlighted={isHighlighted} />
+    </div>
+    <h1 class="fontStyleH5 fontColorPrimary">{title}</h1>
     <div>
         <div>
-            <svelte:component this={icon} isHighlighted={isHighlighted} />
+            
         </div>
-        <h1 class="fontStyleH5">{title}</h1>
+        
         <span class="fontStyleP highlightBoxBody">{body}</span>
     </div>
 </div>
 
 <style>
+    .sectionHightlightBox h1
+    {
+        margin: 20px;
+    }
+
+    .sectionHightlightBox .highlightBoxIcon
+    {
+        height: 50px;
+    }
 
     .sectionHightlightBox
     {
         color: var(--colors-color4);
-        transition: all 500ms ease;
+        transition: all 300ms ease;
+        background: linear-gradient(316.09deg, #203238 1.63%, #0F1E22 97.12%);
+        border: 6px solid var(--colors-primary);
+        border-radius: 35px;
     }
 
-    .sectionHightlightBox > div
+    .sectionHightlightBox > div,
+    .sectionHightlightBox > h1
     {
-        width: 236pt;
-        margin: 10px auto;
+        margin: 20px;
     }
 
     .sectionHightlightBox.sectionHightlightBoxHighlighted
     {
-        margin-top: -30pt;
-        margin-bottom: -30pt;
-        background-color: var(--colors-primary);
-        color: var(--colors-color2);
-        border-radius: 35pt;
-    }
-
-    .sectionHightlightBox > div > *
-    {
-        margin: 0 auto;
-        text-align: center;
-        display: block;
-        text-align: center; 
-    }
-
-    .sectionHightlightBox > div > div
-    {
-        margin-top:50pt;
+        transform: scale(1.1);
+        background: linear-gradient(180.09deg, #203238 1.63%, #0F1E22 97.12%);
     }
 
     .sectionHightlightBox > div > h1
@@ -65,17 +68,5 @@
     .sectionHightlightBox > div > span
     {
         margin-top: 20pt;
-    }
-
-    .highlightBoxBody
-    {
-        opacity: 0;
-        transition: all 500ms ease;
-    }
-
-    .sectionHightlightBoxHighlighted .highlightBoxBody
-    {
-        opacity: 1;
-        overflow: visible;
     }
 </style>

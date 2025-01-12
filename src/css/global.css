@@ -13,6 +13,8 @@
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
+
+    scroll-behavior: smooth;
 }
 
 .pageContent 
@@ -20,14 +22,14 @@
     max-width: 1400px;
     width: 100%;
     display: block;
-    padding: 50px;
+    padding: 50px 0;
+    z-index: 100;
 }
 
 .pageWrapper {
     display: flex;
     justify-content: center;
     box-sizing: border-box;
-    background-color: var(--colors-color2);
     overflow: hidden;
 }
 
@@ -37,9 +39,30 @@
 }
 
 
+
+.contentWrapper
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.content 
+{
+    flex: 1;
+}
+
 /* 
     FONT STYLES
 */
+
+.fontStyleH1
+{
+    line-height: normal;
+    line-height: 112.5px;
+    font-size: 96px;
+    letter-spacing: 2%;
+    font-weight: 800;
+}
 
 .fontStyleH2
 {
@@ -83,6 +106,15 @@
     font-weight: 600;
 }
 
+.fontStyleH7
+{
+    line-height: normal;
+    line-height: 25.14px;
+    font-size: 20px;
+    font-weight: 700;
+    font-weight: bold;
+}
+
 .fontStyleP
 {
     line-height: 24px;
@@ -100,6 +132,12 @@
     color: var(--colors-color3);
 }
 
+.fontColorC5
+{
+    color: var(--colors-color5);
+}
+
+
 .fontColorLight
 {
     color: var(--colors-light);
@@ -108,6 +146,11 @@
 .fontColorPrimary
 {
     color: var(--colors-primary);
+}
+
+.fontColorSecondary
+{
+    color: var(--colors-secondary);
 }
 
 

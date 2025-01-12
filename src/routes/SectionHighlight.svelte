@@ -12,7 +12,7 @@
 
 <div class="pageWrapper">
     <div class="pageContent">
-        <div class="sectionHighlightBox grid grid-cols-4">
+        <div class="sectionHighlightBox grid grid-cols-4 gap-[20px]">
             <HighlightBox icon="{effizient}" body="Unsere CubicCubes sind schnell geliefert und gut durchdacht" title="effizient"></HighlightBox>
             <HighlightBox icon="{modular}" body="Flexible Module ermöglichen einen individuellen Kofferaufbau nach Ihren Bedürfnissen und Anforderungen" title="modular"></HighlightBox>
             <HighlightBox icon="{langlebig}" body="Unsere aus Aluminium gefertigten Kofferaufbauten stehen für mehr Qualität und eine längere Haltbarkeit" title="langlebig"></HighlightBox>
@@ -22,13 +22,15 @@
 </div>
 
 <style>
+
     .sectionHighlightBox
     {
-        border-radius: 35px;
-        background-color: var(--colors-color5);
-        color: var(--colors-light);
-        top: -40px;
-        position: relative;
+        margin-bottom: 50px;
+    }
+
+    div.pageWrapper
+    {
+        overflow: visible !important;
     }
 
     .pageContent

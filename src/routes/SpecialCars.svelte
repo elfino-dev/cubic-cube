@@ -14,14 +14,55 @@
             scrollTrigger: 
             {
                 trigger: '.box1',
-                start: "center bottom",
-                end: "top center",
-                markers: true,
+                start: "top 70%",
+                end: "bottom 30%",
                 toggleActions: "restart pause reverse pause",
-                scrub: 0.5
+                scrub: 0.1
             },
-            bottom: 200,
-            right: 333,
+            bottom: 100,
+            right: 300,
+            opacity: 1
+        });
+
+        gsap.to('.box2', {
+            scrollTrigger: 
+            {
+                trigger: '.box2',
+                start: "top 70%",
+                end: "bottom 30%",
+                toggleActions: "restart pause reverse pause",
+                scrub: 0.1
+            },
+            bottom: 100,
+            right: 100,
+            opacity: 1
+        });
+
+        gsap.to('.box3', {
+            scrollTrigger: 
+            {
+                trigger: '.box3',
+                start: "top 80%",
+                end: "bottom 40%",
+                toggleActions: "restart pause reverse pause",
+                scrub: 0.1
+            },
+            bottom: -100,
+            right: 100,
+            opacity: 1
+        });
+
+        gsap.to('.box4', {
+            scrollTrigger: 
+            {
+                trigger: '.box4',
+                start: "top 80%",
+                end: "bottom 40%",
+                toggleActions: "restart pause reverse pause",
+                scrub: 0.1
+            },
+            bottom: -100,
+            right: -100,
             opacity: 1
         });
 	});
@@ -37,10 +78,10 @@
             <p class="fontStyleH3 fontColorLight largeHeadline">Die Kofferlösung für Rohrreiniggungs- und Inspektionsfahrzeuge</p>
 
             <div class="grid grid-cols-3 gap-6 carConfigurationGrid">
-                <AdornerBox customClass="box1" customStyle="position: absolute; bottom: 100px; right: 300px; opacity: 0"></AdornerBox>
-                <AdornerBox customStyle="position: absolute; bottom: 100px; right: 100px;"></AdornerBox>
-                <AdornerBox customStyle="position: absolute; bottom: -100px; right: -100px;"></AdornerBox>
-                <AdornerBox customStyle="position: absolute; bottom: -100px; right: 100px;"></AdornerBox>
+                <AdornerBox customClass="box1" customStyle="position: absolute; bottom: 300px; right: 500px; opacity: 0"></AdornerBox>
+                <AdornerBox customClass="box2" customStyle="position: absolute; bottom: 300px; right: -100px; opacity: 0"></AdornerBox>
+                <AdornerBox customClass="box3" customStyle="position: absolute; bottom: -100px; right: 700px; opacity: 0"></AdornerBox>
+                <AdornerBox customClass="box4" customStyle="position: absolute; bottom: -150px; right: -150px; opacity: 0"></AdornerBox>
                 <CarConfigurationBox title="CubicCube" buzzwords="kurz" description="Modularer Kofferaufbau für einen kurzen Radstand (2 Module)" imgSrc="{car}"></CarConfigurationBox>
                 <CarConfigurationBox title="CubicCube" buzzwords="kurz" description="Modularer Kofferaufbau für einen kurzen Radstand (2 Module)" imgSrc="{car}"></CarConfigurationBox>
             </div>

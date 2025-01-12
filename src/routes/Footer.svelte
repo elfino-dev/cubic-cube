@@ -1,45 +1,64 @@
 <script lang="ts">
     import '../css/global.css';
 
-    import Button from './Button.svelte';
+    import NewsletterEntryInput from './NewsletterEntryInput.svelte';
 
     import Icon from '$lib/assets/images/Footer/FoooterIcon.png';
+    import elfinofamily from '$lib/assets/images/Footer/elfino_familygroup.png';
+    import elfinoumwelt from '$lib/assets/images/Footer/elfino_umwelt.png';
     
     let { customClass = '' } = $props();
 </script>
 
-<div class="pageWrapper backgroundColor5">  
-    <div class="pageContent">
-                  
-        <div class="grid grid-cols-5 gap-6 carConfigurationGrid">
-            <img src={Icon} />
-            <div></div>
-            <div>
-                <h1 class="fontStyleH6 fontColorPrimary">Unternehmen</h1>
-                <a class="fontStyleFooterLink fontColorLight" href="/">Home</a><br/>
-                <a class="fontStyleFooterLink fontColorLight" href="/Ueber-uns">Über uns</a><br/>
-                <a class="fontStyleFooterLink fontColorLight" href="/Produkt">Produkt</a><br/>
-                <a class="fontStyleFooterLink fontColorLight" href="/Team">Team</a><br/>
-                <a class="fontStyleFooterLink fontColorLight" href="/elfino">elfino-Gruppe</a>
+<div>
+    <div class="pageWrapper backgroundColor5">  
+        <div class="pageContent">
+            <div class="grid grid-cols-5 gap-6 carConfigurationGrid">
+                <div class="col-span-2">
+                    <img src={Icon} />
+                    <NewsletterEntryInput></NewsletterEntryInput>
+                </div>
+                <div>
+                    <h1 class="fontStyleH6 fontColorPrimary">Unternehmen</h1>
+                    <a class="fontStyleFooterLink fontColorLight" href="/">Home</a><br/>
+                    <a class="fontStyleFooterLink fontColorLight" href="/Ueber-uns">Über uns</a><br/>
+                    <a class="fontStyleFooterLink fontColorLight" href="/Produkt">Produkt</a><br/>
+                    <a class="fontStyleFooterLink fontColorLight" href="/Team">Team</a><br/>
+                    <a class="fontStyleFooterLink fontColorLight" href="/elfino">elfino-Gruppe</a>
 
-            </div>
-            <div>
-                <h1 class="fontStyleH6 fontColorPrimary">Rechtliches</h1>
-                <a class="fontStyleFooterLink fontColorLight" href="/">Impressum</a><br/>
-                <a class="fontStyleFooterLink fontColorLight" href="/Datenschutz">Datenschutz</a><br/>
-                <a class="fontStyleFooterLink fontColorLight" href="/Kontakt">Kontakt</a><br/>
-            </div>
+                </div>
+                <div>
+                    <h1 class="fontStyleH6 fontColorPrimary">Rechtliches</h1>
+                    <a class="fontStyleFooterLink fontColorLight" href="/">Impressum</a><br/>
+                    <a class="fontStyleFooterLink fontColorLight" href="/Datenschutz">Datenschutz</a><br/>
+                    <a class="fontStyleFooterLink fontColorLight" href="/Kontakt">Kontakt</a><br/>
+                </div>
 
-            <div>
-                <h1 class="fontStyleH6 fontColorPrimary">Kontakt</h1>
-                <span class="fontStyleFooterText fontColorLight">Gewerbering 4
-                    <br/>
-                    76287 Rheinstetten<br/><br/>
-                    M: +49 (0)179-773-49-73 <br/>
-                    E: f.rittmann@cubiccube.de
-                </span>
-            </div>
-        </div>         
+                <div>
+                    <h1 class="fontStyleH6 fontColorPrimary">Kontakt</h1>
+                    <span class="fontStyleFooterText fontColorLight">Gewerbering 4
+                        <br/>
+                        76287 Rheinstetten<br/><br/>
+                        M: +49 (0)179-773-49-73 <br/>
+                        E: f.rittmann@cubiccube.de
+                        <br/>
+                        <br/>
+                        Teil der:
+                        <br/>
+                        <br/>
+                        <img src={elfinoumwelt} alt="elfino umwelt" class="elfinoIcons"/>
+                        <img src={elfinofamily} alt="elfino family" class="elfinoIcons"/>
+                    </span>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div class="pageWrapper backgroundColor5 copyrightFooter">  
+        <div class="pageContent">
+            <div class="fontColorLight">
+                © 2024 elfino family group GmbH & Co. KG. 
+            </div>         
+        </div>
     </div>
 </div>
 
@@ -47,6 +66,7 @@
 h1
 {
     margin-bottom: 30px;
+    margin-top:50px;
 }
 
 .fontStyleFooterLink
@@ -100,4 +120,22 @@ h1
     left: 0%;
 }
     
+
+.copyrightFooter
+{
+    border-top: 1px solid var(--colors-light);
+}
+
+.copyrightFooter .pageContent
+{
+    padding: 20px;
+}
+
+.elfinoIcons
+{
+    
+    display: inline-block;
+    padding-right: 10px;
+}
+
 </style>
