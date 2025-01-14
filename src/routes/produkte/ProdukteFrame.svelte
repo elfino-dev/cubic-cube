@@ -10,15 +10,17 @@
         <p class="fontStyleH6 fontColorC3 smallHeadline">7 Modelle zur Auswahl</p>
         <p class="fontStyleH3 fontColorLight largeHeadline">CubicCube Koffer sind in 5 Varianten erhältlich</p>       
 
-        <div class="grid grid-cols-1 xl:grid-cols-5 gap-[20px]">
-            <div class="fontColorLight description">
-                Koffer mit hohem oder flachem Dach, sowie Koffer für Fahrzeuge mit kurzem, mittleren oder langem Radstand.
+        <div class="carDetailWrapper">
+            <div class="singleCar grid grid-cols-1 xl:grid-cols-5 gap-[20px]">
+                <div class="fontColorLight description">
+                    Koffer mit hohem oder flachem Dach, sowie Koffer für Fahrzeuge mit kurzem, mittleren oder langem Radstand.
+                </div>
+                <div class="xl:col-span-3 productsCar">
+                    <div style="background-image: url({productsCar}); background-repeat:no-repeat; background-position: 0% 50%;"></div>       
+                    <p class="fontStyleH5 fontColorSecondary carDescription">Mittlerer Radstand 3,665m (3 Module)</p>
+                </div>
+                <div></div>
             </div>
-            <div class="xl:col-span-3 productsCar">
-                <div style="background-image: url({productsCar}); background-repeat:no-repeat; background-position: 0% 50%;"></div>       
-                <p class="fontStyleH5 fontColorSecondary carDescription">Mittlerer Radstand 3,665m (3 Module)</p>
-            </div>
-            <div></div>
         </div>
 
 
@@ -38,6 +40,17 @@
 
 
 <style>
+    .carDetailWrapper
+    {
+        position: relative;
+        height: 449px;
+    }
+
+    .carDetailWrapper .singleCar
+    {
+        width: 100%;
+        position: absolute;
+    }
 
     .productsCar > div
     {

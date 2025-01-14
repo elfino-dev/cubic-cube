@@ -2,13 +2,13 @@
 	import ArrowTopRight from "$lib/assets/images/Common/ArrowTopRight.svelte";
     import Button from "./Button.svelte";
 
-    let { title, buzzwords, description, imgSrc } = $props();
+    let { link, title, buzzwords, description, imgSrc } = $props();
 </script>
 
 <div class="carConfigurationBox">
     <div class="carConfigurationHighlightBorder">
         <div class="buttonWrapper">
-            <Button customStyle="aspect-ratio: 1 / 1;"><ArrowTopRight></ArrowTopRight></Button>
+            <Button link={link} customStyle="aspect-ratio: 1 / 1;"><ArrowTopRight></ArrowTopRight></Button>
         </div>
         <img src="{imgSrc}" alt={title}/>
             <div class="carTitle fontStyleH6 fontColorPrimary">{title}</div>

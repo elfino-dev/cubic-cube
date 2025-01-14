@@ -1,13 +1,13 @@
 <script>   
-    let { customStyle = '' } = $props();
+    let { link, customStyle = '' } = $props();
 </script>
 
-<p style="{customStyle}">
+<a href="{link}" style="{customStyle}">
     <slot></slot>
-</p>
+</a>
 
 <style>
-    p{
+    a{
         display: inline-block;
         padding:10px; 
         background-color:var(--colors-primary);
