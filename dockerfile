@@ -1,27 +1,21 @@
-FROM node:18.18.0-alpine AS builder
+# Use Node.js LTS as the base image
+FROM node:18
 
+# Set the working directory in the container
 WORKDIR /app
 
-COPY package*.json .
-COPY pnpm-lock.yaml .
+# Copy package files and install dependencies
+COPY package.json package-lock.json ./
+RUN npm install
 
-RUN npm i -g pnpm
-RUN pnpm install
-
+# Copy the rest of the application
 COPY . .
 
-RUN pnpm run build
-RUN pnpm prune --prod
+# Build the application
+RUN npm run build
 
-FROM node:18.8.0-alpine AS deployer
-
-WORKDIR /app
-
-COPY --from=builder /app/build build/
-COPY --from=builder /app/package.json .
-
+# Expose the port (for adapter-node or custom server)
 EXPOSE 3000
 
-ENV NODE_ENV=production
-
-CMD [ "node", "build" ]
+# Start the application
+CMD ["node", "build"]
