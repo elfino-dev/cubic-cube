@@ -22,7 +22,6 @@
 </div>
 
 <style>
-
     .sectionHighlightBox
     {
         margin-bottom: 50px;
@@ -35,6 +34,6 @@
 
     .pageContent
     {
-        padding: 0;
+        margin-top: 100px;
     }
 </style>

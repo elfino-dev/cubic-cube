@@ -2,160 +2,77 @@
     import '../css/global.css';
     import Button from './Button.svelte';
     import teaser from '$lib/assets/images/TeaserImage.png';
+    //import StickyHeader from './StickyHeader.svelte';
 </script>
-
 <div class="pageWrapper">
-    <div class="square1"/>
-    <div class="square2"/>
-    <div class="square3"/>
-    <div class="square4"/>
-    <div class="square5"/>
-    <div class="square6"/>
-    <div class="square7"/>
+    <div id="square1"></div>
+    <div id="square2"></div>
 
 
     <div class="pageContent">
-        <div class="sectionHighlightBox grid grid-cols-2 gap-[50px]">
-            <div class="teaserImage"></div>
-            <div class="flex items-center justify-center"> 
-                <div class="teaserContentWrapper"> 
-                    <span class="fontColorLight">Die innovative Nutzfahrzeug-Kompaktlösung</span>
-                    <h4 class="fontStyleH4 fontColorLight">Flexible Lösungen durch modulare Bauweise</h4>
-                    <Button>Jetzt beraten lassen</Button>
-                </div> 
-            </div>
+        
+        <div class="flex items-center justify-center"> 
+            <div class="teaserContentWrapper"> 
+                <h4 class="fontStyleH6 fontColorPrimary">CubicCube: <br/>Die innovative Nutzfahrzeug-Kompaktlösung</h4>
+                <h1 class="fontStyleH1 fontColorLight">Flexible Lösungen durch modulare Bauweise</h1>
+            </div> 
         </div>
+        
     </div>
 </div>
 
 
 <style>
-    @keyframes rotation {
-        0% {
-            transform: rotate(45deg);
-            left: -10%;
-            opacity:0;
-            transform: scale(1f)
-        }
-        30%{
-            opacity: 0.5;
-        }
-        70%{
-            opacity: 0.5;
-        }
-        100% {
-            transform: rotate(145deg);
-            left: 110%;
-            opacity: 0;
-            transform: scale(0.2f)
-        }
+    #square1
+    {
+        position: absolute;
+        right: 80vw;
+        top: calc((100vh - 3000px) / 2);
+        width: 3000px;
+        height: 3000px;
+        border-radius: 120px;
+        transform: rotate(45deg);
+        background-color: #415D63CC;
+    }
+
+    #square2
+    {
+        position: absolute;
+        right: calc(80vw - 25px);
+        top: calc((100vh - 3050px) / 2);
+        width: 3050px;
+        height: 3050px;
+        border-radius: 144px;
+        transform: rotate(45deg);
+        border: 10px solid var(--colors-primary);
     }
 
     .pageWrapper{
         position: relative;
+        background: url("$lib/assets/images/TeaserImage.png") no-repeat;
+        background-position: center top;
+        background-size: auto 100%;
+        height: 100vh;
     }
-    .square1
+
+    .teaserContentWrapper
     {
-        animation: rotation 60s infinite linear;
         position: absolute;
-        width: 500px;
-        height: 500px;
-        border: 10px solid #41707F; 
-        border-radius: 50px;
-        z-index: 0;
-        top: 20%;
-    }
-    .square2
-    {
-        animation: rotation 60s infinite linear;
-        animation-delay: 10s;
-        opacity: 0;
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        border: 7px solid #41707F; 
-        border-radius: 20px;
-        z-index: 0;
-        top: 40%
-    }
-    .square3
-    {
-        animation: rotation 60s infinite linear;
-        animation-delay: 20s;
-        opacity: 0;
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        border: 5px solid #41707F; 
-        border-radius: 10px;
-        z-index: 0;
-        top: 20%;
-    }
-    .square4
-    {
-        animation: rotation 60s infinite linear;
-        animation-delay: 30s;
-        opacity: 0;
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        border: 7px solid #41707F; 
-        border-radius: 20px;
-        z-index: 0;
-        top: 60%;
-    }
-    .square5
-    {
-        animation: rotation 60s infinite linear;
-        animation-delay: 35s;
-        opacity: 0;
-        position: absolute;
-        width: 120px;
-        height: 120px;
-        border: 5px solid #41707F; 
-        border-radius: 20px;
-        z-index: 0;
-        top: 30%;
-    }
-    .square6
-    {
-        animation: rotation 60s infinite linear;
-        animation-delay: 40s;
-        opacity: 0;
-        position: absolute;
-        width: 110px;
-        height: 110px;
-        border: 5px solid #41707F; 
-        border-radius: 20px;
-        z-index: 0;
-        top: 50%;
-    }
-    .square7
-    {
-        animation: rotation 60s infinite linear;
-        animation-delay: 45s;
-        opacity: 0;
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        border: 5px solid #41707F; 
-        border-radius: 20px;
-        z-index: 0;
-        top: 70%;
+        left: 10vw;
+        top: 50vh;
+        transform: translateY(-50%);
+        margin: 0;
+        width: 45vh;
     }
 
     .teaserContentWrapper > *
     {
-        margin: 20px 0;
+        vertical-align: middle;
     }
 
-    .teaserImage
+    .pageContent
     {
-        background: url("$lib/assets/images/TeaserImage.png") no-repeat;
-        background-size: 100%;
-        width: 100%;
-        height: 606px;
-        position: relative;
-        overflow: hidden;
+        margin-top:0;
+        padding-top:0;
     }
 </style>

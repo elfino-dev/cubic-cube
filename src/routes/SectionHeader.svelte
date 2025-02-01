@@ -12,13 +12,13 @@
             <div class="align-middle">
                 <img alt="Cubic Cube" src={logo} />
             </div>
+            <div></div>
             <a class="align-middle pageButton" href="/">Home</a>
             <a class="align-middle pageButton" href="#aboutUs">Über uns</a>
             <a class="align-middle pageButton" href="/produkte">Produkte</a>
-            <a class="align-middle pageButton" href="#team">Team</a>
             <a class="align-middle pageButton" href="/kontakt">Kontakt</a>
             <div class="align-middle">
-                <Button>Jetzt beraten lassen</Button>
+                <Button link="/kontakt">Jetzt beraten lassen</Button>
             </div>
         </div>
     </div>
@@ -43,10 +43,10 @@
     }
 
     .pageButton{
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
+        font-family: "Sans Serif Pro", sans-serif;
+        font-weight: 300;
         font-style: normal;
-        font-size: 17pt;
+        font-size: 20px;
         padding: 5px 10px;
         border-radius: 10px;
         position: relative;

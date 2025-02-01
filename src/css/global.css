@@ -10,7 +10,7 @@
     
     --colors-light: #FFFFFF;
 
-    font-family: "Roboto", sans-serif;
+    font-family: "Source Sans 3", sans-serif;
     font-weight: 400;
     font-style: normal;
 
@@ -58,34 +58,27 @@
 .fontStyleH1
 {
     line-height: normal;
-    line-height: 112.5px;
-    font-size: 96px;
+    line-height: 80px;
+    font-size: 60px;
     letter-spacing: 2%;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .fontStyleH2
 {
     line-height: normal;
     line-height: 84.22px;
-    font-size: 72px;
+    font-size: 70px;
     letter-spacing: 2%;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 .fontStyleH3
 {
     line-height: normal;
     line-height: 49.22px;
-    font-size: 42px;
+    font-size: 50px;
     letter-spacing: 2%;
-    font-weight: 200;
-}
-
-.fontStyleH4
-{
-    line-height: 39.84px;
-    font-size: 34px;
     font-weight: 300;
 }
 
@@ -101,7 +94,7 @@
 {
     line-height: normal;
     line-height: 28.13px;
-    font-size: 24px;
+    font-size: 25px;
     letter-spacing: 2%;
     font-weight: 600;
 }
@@ -118,7 +111,8 @@
 .fontStyleP
 {
     line-height: 24px;
-    font-size: 17px;
+    font-size: 20px;
+    font-weight: 300;
     letter-spacing: 0;
 }
 

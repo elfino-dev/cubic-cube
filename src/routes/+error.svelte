@@ -7,7 +7,7 @@
 
 <div class="contentWrapper">
     <div class="content">
-        <Header customClass=""></Header>
+        <Header></Header>
         <ErrorPage></ErrorPage>
     </div>
     <div class="footer">

@@ -17,5 +17,7 @@
         line-height: 20px;
         vertical-align: middle;
         cursor: pointer;
+        font-size: 18px;
+        font-weight: 400;
     }
 </style>

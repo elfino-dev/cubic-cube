@@ -23,8 +23,6 @@
                     <a class="fontStyleFooterLink fontColorLight" href="/">Home</a><br/>
                     <a class="fontStyleFooterLink fontColorLight" href="/Ueber-uns">Über uns</a><br/>
                     <a class="fontStyleFooterLink fontColorLight" href="/Produkt">Produkt</a><br/>
-                    <a class="fontStyleFooterLink fontColorLight" href="/Team">Team</a><br/>
-                    <a class="fontStyleFooterLink fontColorLight" href="/elfino">elfino-Gruppe</a>
 
                 </div>
                 <div>
@@ -55,7 +53,7 @@
     </div>
     <div class="pageWrapper backgroundColor5 copyrightFooter">  
         <div class="pageContent">
-            <div class="fontColorLight">
+            <div class="fontColorLight footerCopyright">
                 © 2024 elfino family group GmbH & Co. KG. 
             </div>         
         </div>
@@ -65,13 +63,19 @@
 <style>
 h1
 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-top:50px;
+}
+
+.footerCopyright
+{
+    font-weight: 300;
+    font-size: 17px;
 }
 
 .fontStyleFooterLink
 {
-    height: 30px;
+    height: 40px;
     line-height: 30px;
     position: relative;
     vertical-align: middle;
@@ -83,7 +87,7 @@ h1
 .fontStyleFooterLink
 {
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .fontStyleFooterLink:before,

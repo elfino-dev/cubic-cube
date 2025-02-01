@@ -14,7 +14,7 @@
             {/if}
 
             {#if subtext != null}
-                <div class="fontStyleH3 fontColorPrimary">
+                <div class="fontStyleH6 fontColorPrimary" style="padding-top:40px;">
                     {subtext}
                 </div>
             {/if}

@@ -44,8 +44,8 @@
         color: var(--colors-color4);
         transition: all 300ms ease;
         background: linear-gradient(316.09deg, #203238 1.63%, #0F1E22 97.12%);
-        border: 6px solid var(--colors-primary);
         border-radius: 35px;
+        border: 3px solid var(--colors-primary);
     }
 
     .sectionHightlightBox > div,

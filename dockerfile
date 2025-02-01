@@ -18,4 +18,4 @@ RUN node -r dotenv/config build
 EXPOSE 3500
 
 # Start the application
-CMD ["node", "build"]
+CMD ["sh", "-c", "PORT=3500 node build"]

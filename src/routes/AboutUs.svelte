@@ -91,6 +91,8 @@
     .aboutUs .description
     {
         margin-top: 30px;
+        font-weight: 300;
+        font-size: 20px;
     }
 
     .aboutUs .buzzwords

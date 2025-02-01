@@ -4,7 +4,7 @@
 </script>
 
 <div>
-    <h1 class="fontStyleH6 fontColorPrimary">Jetzt beraten lassen</h1>
+    <h1 class="fontStyleH6 fontColorPrimary" style="padding-bottom:20px;">Jetzt beraten lassen</h1>
     <input placeholder="E-Mail"/> <Button customStyle="aspect-ratio: 1 / 1; display: inline-block;"><Arrow></Arrow></Button>
 </div>
 <style>
@@ -19,6 +19,7 @@
         width: 270px;
         display: inline-block;
         color: var(--colors-light);
+        font-size: 17px;
     }
     
 </style>
