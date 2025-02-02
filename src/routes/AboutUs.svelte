@@ -139,7 +139,7 @@
             margin: auto;
 
             position: absolute;
-            border: 7px solid var(--colors-primary);
+            border: 3px solid var(--colors-primary);
             border-radius: 100px;
             left: 300px;
             opacity: 0;
@@ -179,7 +179,7 @@
             margin: auto;
 
             position: absolute;
-            border: 7px solid var(--colors-primary);
+            border: 3px solid var(--colors-primary);
             border-radius: 100px;
             left: 300px;
             opacity: 0;

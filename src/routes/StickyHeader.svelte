@@ -11,24 +11,48 @@
 
     onMount(() => {
         gsap.registerPlugin(ScrollTrigger);
-        gsap.to(".pageWrapper", {
+        gsap.to("#menuBar", {
             opacity: "1", // Solid color at 800px
+            left: '-1%',
+            width: '102%',
+            borderRightWidth: 0,
+            borderLeftWidth: 0,
+            borderBottomLeftRadius: 0,
+            borderBottomRightRadius: 0,
             scrollTrigger: {
                 trigger: "body",
                 start: "top+=100 top", // Starts animating early (adjustable)
                 end: "top+=300 top", // Fully solid at 800px
                 scrub: 1, // Smooth transition
             },
-        });        
+        });   
+        
+        gsap.to("#menuBar .headerGrid", {
+            opacity: "1", // Solid color at 800px
+            scrollTrigger: {
+                trigger: "body",
+                start: "top+=300 top", // Starts animating early (adjustable)
+                end: "top+=500 top", // Fully solid at 800px
+                scrub: 1, // Smooth transition
+            },
+        });  
+        
+        gsap.to("#cubicCubeLogo", {
+            left: "0", // Solid color at 800px
+            scrollTrigger: {
+                trigger: "body",
+                start: "top+=100 top", // Starts animating early (adjustable)
+                end: "top+=300 top", // Fully solid at 800px
+                scrub: 1, // Smooth transition
+            },
+        });   
     });
     
 </script>
-<div class="pageWrapper">
+<div class="pageWrapper" id="menuBar">
     <div class="pageContent">
         <div class="grid grid-cols-7 headerGrid {customClass}">
-            <div class="align-middle">
-                <img alt="Cubic Cube" src={logo} />
-            </div>
+            <div></div>
             <div></div>
             <a class="align-middle pageButton" href="/">Home</a>
             <a class="align-middle pageButton" href="#aboutUs">Über uns</a>
@@ -41,22 +65,58 @@
     </div>
 </div>
 
+<div class="pageWrapper" id="logoBar">
+    <div class="pageContent">
+        <img alt="Cubic Cube" src={logo} id="cubicCubeLogo"/>
+    </div>
+</div>
 <style>
+    
+    #logoBar
+    {
+        pointer-events: none;
+    }    
+
+    #logoBar .pageContent
+    {
+        pointer-events: none;
+    }
+
+    #cubicCubeLogo
+    {
+        position: absolute;
+        left: calc(50% - 204px / 2);
+        top: 0;
+    }
+
     .pageWrapper
     {
-        background-color: #203238;
         width: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        border-bottom: 1px solid #A6D760;
-        opacity: 0;
-        transition: all 0.5;
+        height: 100px;
         z-index: 9000;
+    }
+
+    #menuBar.pageWrapper
+    {
+        background-color: #203238;
+        position: fixed;
+        top: 0;
+        left: calc(50% - 150px); 
+        width: 300px;
+        border-right: 3px solid #A6D760;
+        border-left: 3px solid #A6D760;
+        border-bottom: 3px solid #A6D760;
+        border-bottom-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+        transition: all 0.5;
     }
 
     .pageContent
     {
+        position: relative;
         padding: 0;
     }
 
@@ -64,6 +124,7 @@
     {
         height: 91px; 
         color: var(--colors-light);
+        opacity: 0;
     }
 
     .headerGrid > a,

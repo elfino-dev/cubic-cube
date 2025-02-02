@@ -12,7 +12,7 @@ RUN npm install
 COPY . .
 
 # Build the application
-RUN node -r dotenv/config build
+RUN npm run build
 
 # Expose the port (for adapter-node or custom server)
 EXPOSE 3500
