@@ -8,7 +8,7 @@
     .adornerBox
     {
         border: 6px solid var(--colors-secondary);
-        border-radius: 20px;
+        border-radius: 35px;
         height: 150px; 
         width: 150px;        
     }

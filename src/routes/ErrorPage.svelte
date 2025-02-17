@@ -5,7 +5,7 @@
 <div class="errorPage">
     <h1 class="errorCode fontColorLight">{$page.status}</h1>
     <div class="fontStyleH4 fontColorC3">Page not found</div>
-    <div class="fontStyleP fontColorLight">
+    <div class="fontStyleP fontColorLight lastDiv">
         Sieht aus, als wären Sie in eine digitale Sackgasse geraten. <br/>
         Aber keine Angst! In unserer CubicCube-Welt gibt es noch viel zu entdecken.
     </div>
@@ -25,5 +25,10 @@
         text-align: center;
         line-height: 240px;
         margin-top:20vh;
+    }
+
+    .lastDiv
+    {
+        margin-bottom: 35px;
     }
 </style>

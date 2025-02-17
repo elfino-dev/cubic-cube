@@ -8,17 +8,15 @@
 </script>
 
 <div 
-    class="sectionHightlightBox {isHighlighted ? 'sectionHightlightBoxHighlighted' : ''}" 
+    class="sectionHightlightBox aspect-square {isHighlighted ? 'sectionHightlightBoxHighlighted' : ''}" 
     onmouseenter={() => isHighlighted = true }
     onmouseleave={() => isHighlighted = false }
     aria-pressed={isHighlighted} 
-    role="button"
     tabindex="0">
-
     <div class="highlightBoxIcon">
-        <svelte:component this={icon} isHighlighted={isHighlighted} />
+        <img src={icon} alt="frontIcon"/>
     </div>
-    <h1 class="fontStyleH5 fontColorPrimary">{title}</h1>
+    <h1 class="fontStyleH5 fontColorPrimary highlightBoxTitle">{title}</h1>
     <div>
         <div>
             
@@ -36,7 +34,24 @@
 
     .sectionHightlightBox .highlightBoxIcon
     {
-        height: 50px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sectionHightlightBox .highlightBoxIcon img
+    {
+        margin-top: 30px;
+        height: 60px;
+        width: 60px;
+    }
+
+    .highlightBoxBody,
+    .highlightBoxTitle
+    {
+        text-align: center;
+        display: block;
     }
 
     .sectionHightlightBox
@@ -45,7 +60,7 @@
         transition: all 300ms ease;
         background: linear-gradient(316.09deg, #203238 1.63%, #0F1E22 97.12%);
         border-radius: 35px;
-        border: 3px solid var(--colors-primary);
+        border: 3px solid var(--colors-color5);
     }
 
     .sectionHightlightBox > div,
@@ -56,13 +71,7 @@
 
     .sectionHightlightBox.sectionHightlightBoxHighlighted
     {
-        transform: scale(1.1);
-        background: linear-gradient(180.09deg, #203238 1.63%, #0F1E22 97.12%);
-    }
-
-    .sectionHightlightBox > div > h1
-    {
-        margin-top: 10pt;
+        border-color: var(--colors-primary);
     }
 
     .sectionHightlightBox > div > span

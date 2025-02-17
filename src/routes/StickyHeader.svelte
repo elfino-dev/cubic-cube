@@ -1,6 +1,8 @@
 <script lang="ts">
     import '../css/global.css';
-    import logo from '$lib/assets/images/cubicCubeLogo.png';
+    import logoExpanded from '$lib/assets/images/cubicCubeLogo.png';
+    import logoCollapsed from '$lib/assets/images/LOGO_CubicCube_2024_RZ_web_horizontal.png';
+
     import Button from './Button.svelte';
 
     let { customClass = '' } = $props();
@@ -15,6 +17,8 @@
             opacity: "1", // Solid color at 800px
             left: '-1%',
             width: '102%',
+            backgroundColor: "#203238",
+            borderBottom: "3px solid #A6D760",
             borderRightWidth: 0,
             borderLeftWidth: 0,
             borderBottomLeftRadius: 0,
@@ -38,7 +42,8 @@
         });  
         
         gsap.to("#cubicCubeLogo", {
-            left: "0", // Solid color at 800px
+            opacity: "0", // Solid color at 800px
+            left: 0,
             scrollTrigger: {
                 trigger: "body",
                 start: "top+=100 top", // Starts animating early (adjustable)
@@ -51,15 +56,16 @@
 </script>
 <div class="pageWrapper" id="menuBar">
     <div class="pageContent">
-        <div class="grid grid-cols-7 headerGrid {customClass}">
+        <div class="grid grid-cols-6 headerGrid {customClass}">
+            <div class="align-middle">
+                <a href="/"><img alt="Cubic Cube" src={logoExpanded} /></a>
+            </div>
             <div></div>
-            <div></div>
-            <a class="align-middle pageButton" href="/">Home</a>
-            <a class="align-middle pageButton" href="#aboutUs">Über uns</a>
-            <a class="align-middle pageButton" href="/produkte">Produkte</a>
+            <a class="align-middle pageButton" href="/ueberUns">Über uns</a>
+            <a class="align-middle pageButton" href="/modelle">Modelle</a>
             <a class="align-middle pageButton" href="/kontakt">Kontakt</a>
             <div class="align-middle">
-                <Button link="/kontakt">Jetzt beraten lassen</Button>
+                <Button link="/kontakt">Jetzt beraten lassen</Button>  
             </div>
         </div>
     </div>
@@ -67,11 +73,16 @@
 
 <div class="pageWrapper" id="logoBar">
     <div class="pageContent">
-        <img alt="Cubic Cube" src={logo} id="cubicCubeLogo"/>
+        <a href="/" id="cubicCubeLogo"><img alt="Cubic Cube" src={logoCollapsed} /></a> 
     </div>
 </div>
 <style>
     
+    .logoWhenExpanded
+    {
+        opacity: 0;
+    }
+
     #logoBar
     {
         pointer-events: none;
@@ -85,8 +96,16 @@
     #cubicCubeLogo
     {
         position: absolute;
-        left: calc(50% - 204px / 2);
+        left: calc(50% - 220px / 2);
         top: 0;
+
+        pointer-events: all;
+    }
+
+    #logoBar img
+    {
+        margin-top: 15px;
+        width: 220px;
     }
 
     .pageWrapper
@@ -101,14 +120,14 @@
 
     #menuBar.pageWrapper
     {
-        background-color: #203238;
+        background-color: white;
         position: fixed;
         top: 0;
         left: calc(50% - 150px); 
         width: 300px;
-        border-right: 3px solid #A6D760;
+        /* border-right: 3px solid #A6D760;
         border-left: 3px solid #A6D760;
-        border-bottom: 3px solid #A6D760;
+        border-bottom: 3px solid #A6D760; */
         border-bottom-left-radius: 35px;
         border-bottom-right-radius: 35px;
         transition: all 0.5;

@@ -12,6 +12,10 @@
 	import WhyChooseUs from './WhyChooseUs.svelte';
 	import Footer from './Footer.svelte';
 	import StickyHeader from './StickyHeader.svelte';
+
+    
+    import cta1 from '$lib/assets/images/Cta/background1.png';
+    import cta2 from '$lib/assets/images/Cta/background2.png';
 </script>
 
 <div class="contentWrapper">
@@ -20,10 +24,10 @@
         <Highlight customClass=""></Highlight>
         <AboutUs customClass=""></AboutUs>
         <OurService customClass=""></OurService> 
-        <Cta buttonLink="/jetzt-entdecken.html" content="Die Idee, eines modularen Koffers war so bestechend, dass wir ihn bauen mussten."></Cta>
+        <Cta imgSrc="{cta1}" buttonLink="/jetzt-entdecken.html" content="Die Idee, eines modularen Koffers war so bestechend, dass wir ihn bauen mussten."></Cta>
         <SpecialCars customClass=""></SpecialCars>
         <Testemonials></Testemonials>
-        <Cta content="Unser Anspruch ist es, die Zukunft mit innovativen Ideen zu gestalten und den Anforderungen des Marktes einen Schritt voraus zu sein." subtext="Frank Rittmann, Geschäftsführer"></Cta>
+        <Cta imgSrc="{cta2}" content="Unser Anspruch ist es, die Zukunft mit innovativen Ideen zu gestalten und den Anforderungen des Marktes einen Schritt voraus zu sein." subtext="Frank Rittmann, Geschäftsführer"></Cta>
         <WhyChooseUs></WhyChooseUs>
     </div>
     <div class="footer">

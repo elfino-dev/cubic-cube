@@ -12,7 +12,6 @@
         <Header customClass=""></Header>
         <KontaktHeader leftSquareColor="#DE995B" rightSquareColor="#A6D760"></KontaktHeader>
         <KontaktFrame></KontaktFrame>
-        <KontaktMap></KontaktMap>
     </div>
     <div class="footer">
         <Footer></Footer>

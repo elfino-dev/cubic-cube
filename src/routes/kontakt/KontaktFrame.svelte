@@ -2,26 +2,26 @@
     import '../../css/global.css';
     import Button from './../Button.svelte';
 
-    import contactMail from '$lib/assets/images/kontakt/contactMail.png';
-    import contactMap from '$lib/assets/images/kontakt/contactMap.png';
-    import contactPhone from '$lib/assets/images/kontakt/contactPhone.png';
+    import contactMail from '$lib/assets/images/kontakt/icon_mail_orange.svg';
+    import contactMap from '$lib/assets/images/kontakt/icon_maps_orange.svg';
+    import contactPhone from '$lib/assets/images/kontakt/icon_tel_orange.svg';
 </script>
 
 <div class="pageWrapper">
     <div class="pageContent">
-        <div class="grid grid-cols-1 xl:grid-cols-5 gap-[20px]">
+        <div class="grid grid-cols-1 xl:grid-cols-5 gap-[40px]">
             <div class="contactText xl:col-span-2">
                 <p class="fontStyleH6 fontColorC3 smallHeadline">Entdecken Sie CubicCube</p>
                 <p class="fontStyleH3 fontColorLight largeHeadline">Lassen Sie sich beraten!</p>
             
-                <div class="fontColorLight description">
+                <div class="fontColorLight description fontStyleP ">
                     Gemeinsam gestalten wir Ihren Laderaum nach Ihren Anforderungen. Rufen Sie uns heute noch an. <br/><br/>
                     Sie haben Fragen oder wissen nicht, ob unsere CubicCubes für Ihren Einsatzzweck geeignet sind? Darauf sind wir spezialisiert. Schließlich sind wir mit dem Ziel gestartet, innovative Aufbauten für verschiedene Fahrzeugmodelle zu entwickeln. <br/><br/>
                     Kommen Sie auf uns zu, denn Innovationen sind unsere Stärke. Gerne beantworten wir ausführlich alle offenen Fragen.
                 </div>
                 <div>
-                    <div class="grid grid-cols-5 gap-[20px] contactElements fontColorLight">
-                        <div style="background-image: url({contactMap}); background-repeat:no-repeat; background-position: 0% 50%;"></div>
+                    <div class="grid grid-cols-5 gap-[20px] contactElements fontColorLight fontStyleP ">
+                        <div style="background-image: url({contactMap}); background-repeat:no-repeat; background-position: 50% 50%; margin: 10px;"></div>
                         <div class="col-span-4 flex items-center">
                             CubicCube GmbH<br/>
                             Gewerbering 4<br/>
@@ -29,15 +29,15 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-5 gap-[20px] contactElements fontColorLight">
-                        <div style="background-image: url({contactMail}); background-repeat:no-repeat; background-position: 0% 50%;"></div>
+                    <div class="grid grid-cols-5 gap-[20px] contactElements fontColorLight fontStyleP ">
+                        <div style="background-image: url({contactMail}); background-repeat:no-repeat; background-position: 50% 50%; margin: 10px; "></div>
                         <div class="col-span-4 flex items-center">
                             f.rittmann@cubiccube.de
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-5 gap-[20px] contactElements fontColorLight">
-                        <div style="background-image: url({contactPhone}); background-repeat:no-repeat; background-position: 0% 50%;"></div>
+                    <div class="grid grid-cols-5 gap-[20px] contactElements fontColorLight fontStyleP ">
+                        <div style="background-image: url({contactPhone}); background-repeat:no-repeat; background-position: 50% 50%; margin: 5px;"></div>
                         <div class="col-span-4 flex items-center">
                             +49 (0)179-773-49-73
                         </div>
@@ -46,14 +46,14 @@
                 
                 
             </div>
-            <div class="contactForm fontColorLight xl:col-span-3" >
+            <div class="contactForm fontColorLight fontStyleP xl:col-span-3" >
                 <h1 class=fontStyleH3>Kontakt</h1>
-                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mollis justo purus, eu ullamcorper orci laoreet et.</div>
+                <div>Schreiben Sie uns eine Nachricht! Wir setzen uns gerne mit Ihnen in Verbindung.</div>
 
                 <div class="grid grid-cols-1 xl:grid-cols-2 gap-[20px]">
                     <div class="contentFrameElement">
-                        <label for="name" class="fontStyleH7">First name</label>
-                        <input type="text" id="name" class="block" placeholder="Name" required />
+                        <label for="name" class="fontStyleH7">Name</label>
+                        <input type="text" id="name" class="block" placeholder="Vor- und Nachname" required />
                     </div>
 
                     <div class="contentFrameElement">
@@ -101,7 +101,7 @@
 
     .contactText .description
     {
-        margin-top: 30px;
+        margin: 30px 0;
     }
 
     .contactForm
@@ -131,7 +131,7 @@
 
     .contactElements:not(:first-child)
     {
-        border-top: 1px solid #B0AFAF1A;
+        border-top: 3px solid #B0AFAF1A;
     }
 
     .contactElements

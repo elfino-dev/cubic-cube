@@ -15,12 +15,12 @@
             {
                 trigger: '.box1Testemonials',
                 start: "top 70%",
-                end: "bottom 30%",
+                end: "bottom 50%",
                 toggleActions: "restart pause reverse pause",
                 scrub: 0.1
             },
             bottom: 350,
-            right: 300,
+            right: 500,
             opacity: 1,
             rotate : -45,
         });
@@ -30,12 +30,12 @@
             {
                 trigger: '.box2Testemonials',
                 start: "top 100%",
-                end: "bottom 50%",
+                end: "bottom 70%",
                 toggleActions: "restart pause reverse pause",
                 scrub: 0.1
             },
             bottom: -150,
-            right: -100,
+            right: 100,
             width: 500,
             height: 500,
             opacity: 1,
@@ -48,7 +48,7 @@
     <div class="pageContent">
         <div class="specialCars">
             <p class="fontStyleH6 fontColorC3 smallHeadline">Kundenstimmen</p>
-            <p class="fontStyleH3 fontColorLight largeHeadline">Innovation, Begeisterung & Anerkennung</p>
+            <p class="fontStyleH3 fontColorLight largeHeadline">Innovation, Begeisterung &<br/> Anerkennung</p>
 
             <AdornerBox customClass="box1Testemonials" customStyle="position: absolute; bottom: 150px; right: 100px;transform: rotate(45deg); background-color: var(--colors-color2); border-width: 0; opacity: 0"></AdornerBox>
             <AdornerBox customClass="box2Testemonials" customStyle="width: 200px; height: 200px; position: absolute; bottom: -150px; right: 300px;transform: rotate-45deg); border-color: var(--colors-color3); opacity: 0"></AdornerBox>
@@ -87,23 +87,21 @@
 
     .testemonialItem
     {
-        background: url("$lib/assets/images/Testemonials/IFAT2024.png") no-repeat;
+        background: url("$lib/assets/images/Testemonials/IFAT2024.jpg") no-repeat;
+        background-size: 700px 700px;
         border-radius: 8px;
         position: relative;
         aspect-ratio: 1 / 1;
         vertical-align: bottom;
         transition: all 0.2s ease-in-out;
-    }
-
-    .testemonialItem:hover
-    {
-        filter: drop-shadow(3px 3px 10px #000000); 
+        border-radius: 35px;
+        overflow: hidden;
     }
 
     .testemonialItem > div
     {
         position: absolute;
-        bottom: 60px;
+        bottom: 40px;
         left: 40px;
         right: 40px;
         background-color: var(--colors-color2);

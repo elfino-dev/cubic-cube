@@ -8,14 +8,13 @@
 
 <div class="pageWrapper">
     <div class="pageContent">
-        <div class="grid grid-cols-7 headerGrid {customClass}">
+        <div class="grid grid-cols-6 headerGrid {customClass}">
             <div class="align-middle">
-                <img alt="Cubic Cube" src={logo} />
+                <a href="/"><img alt="Cubic Cube" src={logo} /></a>
             </div>
             <div></div>
-            <a class="align-middle pageButton" href="/">Home</a>
-            <a class="align-middle pageButton" href="#aboutUs">Über uns</a>
-            <a class="align-middle pageButton" href="/produkte">Produkte</a>
+            <a class="align-middle pageButton" href="/ueberUns">Über uns</a> 
+            <a class="align-middle pageButton" href="/modelle">Modelle</a>
             <a class="align-middle pageButton" href="/kontakt">Kontakt</a>
             <div class="align-middle">
                 <Button link="/kontakt">Jetzt beraten lassen</Button>
@@ -25,6 +24,10 @@
 </div>
 
 <style>
+    .pageWrapper{
+        border-bottom: 3px solid #A6D760;
+    }
+
     .pageContent
     {
         padding: 0;
@@ -40,6 +43,11 @@
     {
         margin: auto;
         color: var(--colors-light);
+    }
+
+    .headerGrid img
+    {
+        width: 204px; 
     }
 
     .pageButton{

@@ -82,6 +82,12 @@
     font-weight: 300;
 }
 
+.fontStyleH4
+{
+    line-height: normal;
+    font-size: 35px;
+    font-weight: 300;
+}
 
 .fontStyleH5
 {
@@ -110,7 +116,7 @@
 
 .fontStyleP
 {
-    line-height: 24px;
+    line-height: 32px;
     font-size: 20px;
     font-weight: 300;
     letter-spacing: 0;

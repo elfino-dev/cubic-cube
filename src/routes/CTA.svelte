@@ -2,15 +2,16 @@
     import '../css/global.css';
 	import Button from './Button.svelte';
 
-    let { content, buttonLink = null, buttonContext = null, subtext = null } = $props();
+    let { content, buttonLink = null, buttonContext = null, subtext = null, imgSrc } = $props();
+
 </script>
 
-<div class="pageWrapper">
+<div class="pageWrapper ctaWrapper" style="background-image: url({imgSrc})">
     <div class="pageContent">
         <div class="grid cta">
             <span class="fontStyleH2 fontColorLight" style="vertical-align: center;">{content}</span>
             {#if buttonContext != null && buttonLink != null}
-                <Button>{buttonContext}</Button>
+                <Button link={buttonLink}>{buttonContext}</Button>
             {/if}
 
             {#if subtext != null}
@@ -24,8 +25,9 @@
 
 <style>
     .pageWrapper{
-        background: url("$lib/assets/images/Cta/BackgroundSmear.png") no-repeat;
-        background-size: 100% 101%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 
     .cta

@@ -3,9 +3,8 @@
 
     import NewsletterEntryInput from './NewsletterEntryInput.svelte';
 
-    import Icon from '$lib/assets/images/Footer/FoooterIcon.png';
-    import elfinofamily from '$lib/assets/images/Footer/elfino_familygroup.png';
-    import elfinoumwelt from '$lib/assets/images/Footer/elfino_umwelt.png';
+    import footerIcon from '$lib/assets/images/Footer/FooterIcon.png';
+    import elfinoIcon from '$lib/assets/images/Footer/elfinoLogo.png';
     
     let { customClass = '' } = $props();
 </script>
@@ -13,23 +12,23 @@
 <div>
     <div class="pageWrapper backgroundColor5">  
         <div class="pageContent">
-            <div class="grid grid-cols-5 gap-6 carConfigurationGrid">
+            <div class="grid grid-cols-5 gap-6">
                 <div class="col-span-2">
-                    <img src={Icon} />
+                    <img src={footerIcon} id="footerImage"/>
                     <NewsletterEntryInput></NewsletterEntryInput>
                 </div>
                 <div>
                     <h1 class="fontStyleH6 fontColorPrimary">Unternehmen</h1>
                     <a class="fontStyleFooterLink fontColorLight" href="/">Home</a><br/>
                     <a class="fontStyleFooterLink fontColorLight" href="/Ueber-uns">Über uns</a><br/>
-                    <a class="fontStyleFooterLink fontColorLight" href="/Produkt">Produkt</a><br/>
+                    <a class="fontStyleFooterLink fontColorLight" href="/Modelle">Modelle</a><br/>
 
                 </div>
                 <div>
                     <h1 class="fontStyleH6 fontColorPrimary">Rechtliches</h1>
-                    <a class="fontStyleFooterLink fontColorLight" href="/">Impressum</a><br/>
+                    <a class="fontStyleFooterLink fontColorLight" href="/Impressum">Impressum</a><br/>
                     <a class="fontStyleFooterLink fontColorLight" href="/Datenschutz">Datenschutz</a><br/>
-                    <a class="fontStyleFooterLink fontColorLight" href="/Kontakt">Kontakt</a><br/>
+                    <a class="fontStyleFooterLink fontColorLight" href="/kontakt">Kontakt</a><br/>
                 </div>
 
                 <div>
@@ -44,8 +43,7 @@
                         Teil der:
                         <br/>
                         <br/>
-                        <img src={elfinoumwelt} alt="elfino umwelt" class="elfinoIcons"/>
-                        <img src={elfinofamily} alt="elfino family" class="elfinoIcons"/>
+                        <img src={elfinoIcon} alt="elfino gruppe" id="elfinoIcon"/>
                     </span>
                 </div>
             </div> 
@@ -67,6 +65,11 @@ h1
     margin-top:50px;
 }
 
+#footerImage
+{
+    width: 220px;
+}
+
 .footerCopyright
 {
     font-weight: 300;
@@ -76,7 +79,8 @@ h1
 .fontStyleFooterLink
 {
     height: 40px;
-    line-height: 30px;
+    line-height: 40px;
+    margin: auto;
     position: relative;
     vertical-align: middle;
     display: inline-block;
@@ -127,7 +131,7 @@ h1
 
 .copyrightFooter
 {
-    border-top: 1px solid var(--colors-light);
+    border-top: 3px solid var(--colors-light);
 }
 
 .copyrightFooter .pageContent
@@ -135,11 +139,11 @@ h1
     padding: 20px;
 }
 
-.elfinoIcons
+#elfinoIcon
 {
-    
     display: inline-block;
     padding-right: 10px;
+    width: 180px;
 }
 
 </style>

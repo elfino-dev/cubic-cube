@@ -10,18 +10,14 @@
     <div class="square1" style="border-color: {leftSquareColor}"/>
     <div class="square2" style="background-color: {leftSquareColor}"/>
 
-    <div class="square3" style="background-color: {rightSquareColor}"/>
+    <div class="square3" style="border-color: {rightSquareColor}"/>
 
 
     <div class="pageContent">
         <div class="content"> 
             <div class="flex items-center justify-center"> 
                 <div class="teaserContentWrapper"> 
-                    <h2 class="fontStyleH2 fontColorLight">Kontakt</h2>
-                    <div>
-                        <span class="fontColorLight">Home &#8594;</span>
-                        <span class="fontColorC3">Kontakt</span>
-                    </div>
+                    
                 </div>
             </div>
         </div> 
@@ -31,7 +27,9 @@
 
 <style>
     .pageWrapper{
-        background: linear-gradient(311.26deg, #203238 59.55%, #41707F 118.4%) !important;
+        background: url("$lib/assets/images/Imagebild_Kontakt2.png") no-repeat;
+        background-size: 100% auto;
+        background-position: 100% 30%;
         position: relative;
     }
 
@@ -50,7 +48,7 @@
         transform: rotate(45deg);
         left: -300px;
         bottom: -520px;
-        border-width: 10px;
+        border-width: 12px;
     }
 
     .square2
@@ -63,6 +61,7 @@
         transform: rotate(45deg);
         left: -268px;
         bottom: -500px;
+        opacity: 0.8;
     }
 
     .square3
@@ -75,6 +74,7 @@
         transform: rotate(45deg);
         right: -200px;
         top: -200px;
+        border-width: 12px;
     }
     
     

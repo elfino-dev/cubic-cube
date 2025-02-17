@@ -1,7 +1,6 @@
 <script lang="ts">
     import '../css/global.css';
     import Button from './Button.svelte';
-    import Arrow from '$lib/assets/images/Common/Arrow.svelte';
     
     let { customClass = '' } = $props();
 
@@ -60,7 +59,7 @@
                         <p>Innovative Technologien</p>
                     </div>
                     <div class="buttonWrapper">
-                        <Button>Mehr erfahren <Arrow></Arrow></Button>
+                        <Button link="/modelle">Mehr erfahren</Button>
                     </div>
                     
                 </div>
@@ -103,6 +102,7 @@
     .aboutUs .buzzwords p
     {
         padding-left: 30px;
+        line-height: 20px;
         height: 30px;
     }
 
@@ -130,7 +130,7 @@
 
     @media (min-width: 1280px) 
     {    
-        .aboutUsCar
+        .aboutUsCarBorder
         {
             height: calc(100% * 0.8);
             aspect-ratio: 1 / 1;     
@@ -139,13 +139,13 @@
             margin: auto;
 
             position: absolute;
-            border: 3px solid var(--colors-primary);
+            border: 6px solid var(--colors-primary);
             border-radius: 100px;
-            left: 300px;
+            left: 300px; 
             opacity: 0;
         }
 
-        .aboutUsCarBorder
+        .aboutUsCar
         {
             height: calc(100% * 0.8);
             aspect-ratio: 1 / 1;     
@@ -160,6 +160,8 @@
             background: url("$lib/assets/images/AboutUs/AboutUsCar.png") no-repeat;
             background-size: 85% 85%;
             background-position: 50% 50%;
+            border-radius: 35px; 
+            border: none;
         }
     }
 
@@ -183,6 +185,9 @@
             border-radius: 100px;
             left: 300px;
             opacity: 0;
+
+            border-radius: 35px; 
+            border: none;
         }
 
         .aboutUsCarBorder
