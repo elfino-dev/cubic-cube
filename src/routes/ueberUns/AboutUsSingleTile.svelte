@@ -6,8 +6,8 @@
 </script>
 
 
-<div class="card aspect-square">
-    <div class="content">
+<div class="card aspect-square transform-gpu">
+    <div class="content transform-gpu">
         <div class="front" >
             <div class="flex flex-column justify-center items-center">
                 <img src={iconFront} alt="frontIcon"/>

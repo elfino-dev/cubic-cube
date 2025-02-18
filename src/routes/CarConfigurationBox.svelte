@@ -12,7 +12,7 @@
 </script>
 
 
-<div class="carConfigurationBox aspect-square">
+<div class="carConfigurationBox aspect-square transform-gpu">
     <div class="carConfigurationHighlightBorder">
         <div class="buttonWrapper">
             <Button link={link} customStyle="aspect-ratio: 1 / 1;"><ArrowTopRight></ArrowTopRight></Button>

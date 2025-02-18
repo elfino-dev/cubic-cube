@@ -101,7 +101,7 @@
 
     .aboutUs .buzzwords p
     {
-        padding-left: 30px;
+        padding-left: 0;
         line-height: 20px;
         height: 30px;
     }

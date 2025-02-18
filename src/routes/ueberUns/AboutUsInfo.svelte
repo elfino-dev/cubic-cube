@@ -42,7 +42,7 @@ Als innovatives Start-Up Unternehmen und Teil der elfino-Group mit Sitz in der T
 
     .largeHeadline
     {
-        margin-top: 30px;
+        margin-top: 10px;
         margin-bottom: 50px;
     }
 </style>

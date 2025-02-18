@@ -21,7 +21,7 @@
                 </div>
                 <div>
                     <div class="grid grid-cols-5 gap-[20px] contactElements fontColorLight fontStyleP ">
-                        <div style="background-image: url({contactMap}); background-repeat:no-repeat; background-position: 50% 50%; margin: 10px;"></div>
+                        <div class="flex flex-row justify-center items-center"><img src={contactMap} alt="map"  style="height: 70px;"/></div>
                         <div class="col-span-4 flex items-center">
                             CubicCube GmbH<br/>
                             Gewerbering 4<br/>
@@ -30,14 +30,14 @@
                     </div>
 
                     <div class="grid grid-cols-5 gap-[20px] contactElements fontColorLight fontStyleP ">
-                        <div style="background-image: url({contactMail}); background-repeat:no-repeat; background-position: 50% 50%; margin: 10px; "></div>
+                        <div class="flex flex-row justify-center items-center"><img src={contactMail} alt="mail" style="height: 40px;"/></div>
                         <div class="col-span-4 flex items-center">
                             f.rittmann@cubiccube.de
                         </div>
                     </div>
 
                     <div class="grid grid-cols-5 gap-[20px] contactElements fontColorLight fontStyleP ">
-                        <div style="background-image: url({contactPhone}); background-repeat:no-repeat; background-position: 50% 50%; margin: 5px;"></div>
+                        <div class="flex flex-row justify-center items-center"><img src={contactPhone} alt="phone" style="height: 55px;"/></div>
                         <div class="col-span-4 flex items-center">
                             +49 (0)179-773-49-73
                         </div>

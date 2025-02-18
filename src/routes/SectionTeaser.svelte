@@ -1,7 +1,5 @@
 <script lang="ts">
     import '../css/global.css';
-    import Button from './Button.svelte';
-    import teaser from '$lib/assets/images/TeaserImage.png';
 
     import { onMount } from 'svelte';
     import { gsap } from 'gsap';
@@ -118,7 +116,7 @@
 
     .pageWrapper{
         position: relative;
-        background: url("$lib/assets/images/TeaserImage.png") no-repeat;
+        background: url("$lib/assets/images/TeaserImage.jpg") no-repeat;
         background-position: center top;
         background-size: auto 100%;
         height: 100vh;
