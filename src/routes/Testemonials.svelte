@@ -54,8 +54,8 @@
             <AdornerBox customClass="box2Testemonials" customStyle="width: 200px; height: 200px; position: absolute; bottom: -150px; right: 300px;transform: rotate-45deg); border-color: var(--colors-color3); opacity: 0"></AdornerBox>
 
             <div class="frameWrapper">
-                <div class="grid grid-cols-2 testemonialGrid">
-                    <div class="testemonialItem fontColorLight">
+                <div class="grid grid-cols-1 xl:grid-cols-2 testemonialGrid gap-[20px]">
+                    <div class="testemonialItem testemonialIFAT fontColorLight">
                         <div>
                             <div>
                                 <div class="testemonialHeadline fontStyleH4">IFAT 2024 München</div>
@@ -63,7 +63,16 @@
                                 <div class="testemonialIcon"></div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
+                    <div class="testemonialItem testemonialROKATECH fontColorLight">
+                        <div>
+                            <div>
+                                <div class="testemonialHeadline fontStyleH4">RO-KA-TECH</div>
+                                <div class="testemonialBody fontStyleP">Besuchen Sie uns auf der RO-KA-TECH. Die internationale Fachmesse für Rohr- und Kanaltechnik am 13. Mai bis 16. Mai 2025 | Messe Kassel.</div>
+                                <div class="testemonialIcon"></div>
+                            </div>
+                        </div>
+                    </div>    
                 </div>
             </div>
         </div>
@@ -87,7 +96,6 @@
 
     .testemonialItem
     {
-        background: url("$lib/assets/images/Testemonials/IFAT2024.jpg") no-repeat;
         background-size: 700px 700px;
         border-radius: 8px;
         position: relative;
@@ -96,6 +104,17 @@
         transition: all 0.2s ease-in-out;
         border-radius: 35px;
         overflow: hidden;
+        background-size: cover;
+    }
+
+    .testemonialItem.testemonialIFAT
+    {
+        background-image: url("$lib/assets/images/Testemonials/IFAT2024.jpg");
+    }
+
+    .testemonialItem.testemonialROKATECH
+    {
+        background-image: url("$lib/assets/images/Testemonials/ROKATECH.jpg");
     }
 
     .testemonialItem > div
@@ -120,7 +139,6 @@
 
     .testemonialIcon
     {
-        background: url("$lib/assets/images/Testemonials/IFATIcon.png") no-repeat;
         border-radius: 8px;
         position: absolute;
         top: calc(-1 * 126px / 2);
@@ -129,5 +147,15 @@
         right: 50px;
     }
 
+    .testemonialItem.testemonialIFAT .testemonialIcon
+    {
+        background: url("$lib/assets/images/Testemonials/IFATIcon.png") no-repeat;
+    }
+
+    .testemonialItem.testemonialROKATECH .testemonialIcon
+    {
+        background: url("$lib/assets/images/Testemonials/ROKATECHIcon.png") no-repeat;
+    }
     
+
 </style>

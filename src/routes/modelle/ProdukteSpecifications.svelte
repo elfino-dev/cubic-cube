@@ -67,7 +67,7 @@
         cubeHeight="1,950 m" 
         weight="4 t" 
         material="Aluminiumverkleidung">
-    <div slot="information">Flachdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Hochdach erhältlich</b></div>
+    <div slot="information">Hochdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Flachdach erhältlich</b></div>
 </ProdukteSingleSpecification>
 
 <ProdukteSingleSpecification 
@@ -105,7 +105,7 @@
         cubeHeight="1,950 m" 
         weight="4 t" 
         material="Aluminiumverkleidung">
-    <div slot="information">Flachdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Hochdach erhältlich</b></div>
+    <div slot="information">Hochdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Flachdach erhältlich</b></div>
 </ProdukteSingleSpecification>
 
 <ProdukteSingleSpecification 
@@ -124,7 +124,7 @@
         cubeHeight="1,950 m" 
         weight="4 t"
         material="Aluminiumverkleidung">
-    <div slot="information">Flachdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Hochdach erhältlich</b></div>
+    <div slot="information">Hochdach, Einzelräder, nur als Hydraulikwagen.</div>
 </ProdukteSingleSpecification>
 
 <ProdukteSingleSpecification 
@@ -143,7 +143,7 @@
         cubeHeight="1,950 m" 
         weight="4 t" 
         material="Aluminiumverkleidung">
-    <div slot="information">Flachdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Hochdach erhältlich</b></div>
+    <div slot="information">Hochdach, Einzelräder, nur als Hydraulikwagen.</div>
 </ProdukteSingleSpecification>
 
 

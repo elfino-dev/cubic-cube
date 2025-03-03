@@ -24,16 +24,22 @@
 </div>
 
 <style>
-    .pageWrapper{
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+.pageWrapper{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@media (min-width: 1280px) 
+{
+    .cta
+    {
+        padding: 50px;
     }
+}
 
     .cta
     {
-        padding: 50px 0;
         text-align: center;
-        padding: 50px;
     }
 </style>

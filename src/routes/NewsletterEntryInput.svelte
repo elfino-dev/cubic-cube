@@ -10,6 +10,27 @@
     </div>
 </div>
 <style>
+
+input
+{
+    margin: 0;
+    border: 0;
+    background-color: var(--colors-color2);
+    display: inline-block;
+    color: var(--colors-light);
+    font-size: 17px;
+}
+
+@media (max-width: 1279px) 
+{
+    input
+    {
+        width: calc(100% - 50px);
+    }
+}   
+
+@media (min-width: 1280px) 
+{
     .wrapper
     {
         margin-top:130px;
@@ -17,13 +38,7 @@
 
     input
     {
-        margin: 0;
-        border: 0;
-        background-color: var(--colors-color2);
         width: 270px;
-        display: inline-block;
-        color: var(--colors-light);
-        font-size: 17px;
     }
-    
+}   
 </style>

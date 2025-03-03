@@ -12,43 +12,48 @@
 <div>
     <div class="pageWrapper backgroundColor5">  
         <div class="pageContent">
-            <div class="grid grid-cols-5 gap-6">
+            <div class="grid grid-cols-1 xl:grid-cols-5 xl:gap-6">
                 <div class="col-span-2">
                     <img src={footerIcon} id="footerImage"/>
                     <NewsletterEntryInput></NewsletterEntryInput>
                 </div>
-                <div>
-                    <h1 class="fontStyleH6 fontColorPrimary">Unternehmen</h1>
-                    <a class="fontStyleFooterLink fontColorLight" href="/">Home</a><br/>
-                    <a class="fontStyleFooterLink fontColorLight" href="/Ueber-uns">Über uns</a><br/>
-                    <a class="fontStyleFooterLink fontColorLight" href="/Modelle">Modelle</a><br/>
-
-                </div>
-                <div>
-                    <h1 class="fontStyleH6 fontColorPrimary">Rechtliches</h1>
-                    <a class="fontStyleFooterLink fontColorLight" href="/Impressum">Impressum</a><br/>
-                    <a class="fontStyleFooterLink fontColorLight" href="/Datenschutz">Datenschutz</a><br/>
-                    <a class="fontStyleFooterLink fontColorLight" href="/kontakt">Kontakt</a><br/>
-                </div>
-
-                <div>
-                    <h1 class="fontStyleH6 fontColorPrimary">Kontakt</h1>
-                    <span class="fontStyleFooterText fontColorLight">Gewerbering 4
-                        <br/>
-                        76287 Rheinstetten<br/><br/>
-                        M: +49 (0)179-773-49-73 <br/>
-                        E: f.rittmann@cubiccube.de
-                        <br/>
-                        <br/>
-                        Teil der:
-                        <br/>
-                        <br/>
-                        <img src={elfinoIcon} alt="elfino gruppe" id="elfinoIcon"/>
-                    </span>
+                <div class="col-span-3">
+                    <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+                        <div>
+                            <h1 class="fontStyleH6 fontColorPrimary">Unternehmen</h1>
+                            <a class="fontStyleFooterLink fontColorLight" href="/">Home</a><br/>
+                            <a class="fontStyleFooterLink fontColorLight" href="/Ueber-uns">Über uns</a><br/>
+                            <a class="fontStyleFooterLink fontColorLight" href="/Modelle">Modelle</a><br/>
+        
+                        </div>
+                        <div>
+                            <h1 class="fontStyleH6 fontColorPrimary">Rechtliches</h1>
+                            <a class="fontStyleFooterLink fontColorLight" href="/Impressum">Impressum</a><br/>
+                            <a class="fontStyleFooterLink fontColorLight" href="/Datenschutz">Datenschutz</a><br/>
+                            <a class="fontStyleFooterLink fontColorLight" href="/kontakt">Kontakt</a><br/>
+                        </div>
+        
+                        <div>
+                            <h1 class="fontStyleH6 fontColorPrimary">Kontakt</h1>
+                            <span class="fontStyleFooterText fontColorLight">Gewerbering 4
+                                <br/>
+                                76287 Rheinstetten<br/><br/>
+                                M: +49 (0)179-773-49-73 <br/>
+                                E: f.rittmann@cubiccube.de
+                                <br/>
+                                <br/>
+                                Teil der:
+                                <br/>
+                                <br/>
+                                <img src={elfinoIcon} alt="elfino gruppe" id="elfinoIcon"/>
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div> 
         </div>
     </div>
+
     <div class="pageWrapper backgroundColor5 copyrightFooter">  
         <div class="pageContent">
             <div class="fontColorLight footerCopyright">

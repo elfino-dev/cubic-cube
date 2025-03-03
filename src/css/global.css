@@ -20,7 +20,7 @@
 .pageContent 
 {
     max-width: 1400px;
-    width: 100%;
+    width: calc(100% - 40px);
     display: block;
     padding: 50px 0;
     z-index: 100;
@@ -55,71 +55,144 @@
     FONT STYLES
 */
 
-.fontStyleH1
+@media (max-width: 1279px) 
 {
-    line-height: normal;
-    line-height: 80px;
-    font-size: 60px;
-    letter-spacing: 2%;
-    font-weight: 600;
+    .fontStyleH1
+    {
+        line-height: normal;
+        line-height: 60px;
+        font-size: 50px;
+        letter-spacing: 2%;
+        font-weight: 600;
+    }
+
+    .fontStyleH2
+    {
+        line-height: normal;
+        line-height: 84.22px;
+        font-size: 50px;
+        letter-spacing: 2%;
+        font-weight: 200;
+    }
+
+    .fontStyleH3
+    {
+        line-height: normal;
+        line-height: 49.22px;
+        font-size: 32px;
+        letter-spacing: 2%;
+        font-weight: 300;
+    }
+
+    .fontStyleH4
+    {
+        line-height: normal;
+        font-size: 25px;
+        font-weight: 300;
+    }
+
+    .fontStyleH5
+    {
+        line-height: normal;
+        font-size: 20px;
+        letter-spacing: 2%;
+    }
+
+    .fontStyleH6
+    {
+        line-height: normal;
+        line-height: 28.13px;
+        font-size: 20px;
+        letter-spacing: 2%;
+        font-weight: 600;
+    }
+
+    .fontStyleH7
+    {
+        line-height: normal;
+        line-height: 25.14px;
+        font-size: 20px;
+        font-weight: 700;
+        font-weight: bold;
+    }
+
+    .fontStyleP
+    {
+        line-height: 32px;
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 0;
+    }
 }
 
-.fontStyleH2
+@media (min-width: 1280px) 
 {
-    line-height: normal;
-    line-height: 84.22px;
-    font-size: 70px;
-    letter-spacing: 2%;
-    font-weight: 200;
-}
+    .fontStyleH1
+    {
+        line-height: normal;
+        line-height: 80px;
+        font-size: 60px;
+        letter-spacing: 2%;
+        font-weight: 600;
+    }
 
-.fontStyleH3
-{
-    line-height: normal;
-    line-height: 49.22px;
-    font-size: 50px;
-    letter-spacing: 2%;
-    font-weight: 300;
-}
+    .fontStyleH2
+    {
+        line-height: normal;
+        line-height: 84.22px;
+        font-size: 70px;
+        letter-spacing: 2%;
+        font-weight: 200;
+    }
 
-.fontStyleH4
-{
-    line-height: normal;
-    font-size: 35px;
-    font-weight: 300;
-}
+    .fontStyleH3
+    {
+        line-height: normal;
+        line-height: 49.22px;
+        font-size: 50px;
+        letter-spacing: 2%;
+        font-weight: 300;
+    }
 
-.fontStyleH5
-{
-    line-height: normal;
-    font-size: 24px;
-    letter-spacing: 2%;
-}
+    .fontStyleH4
+    {
+        line-height: normal;
+        font-size: 35px;
+        font-weight: 300;
+    }
 
-.fontStyleH6
-{
-    line-height: normal;
-    line-height: 28.13px;
-    font-size: 25px;
-    letter-spacing: 2%;
-    font-weight: 600;
-}
+    .fontStyleH5
+    {
+        line-height: normal;
+        font-size: 24px;
+        letter-spacing: 2%;
+    }
 
-.fontStyleH7
-{
-    line-height: normal;
-    line-height: 25.14px;
-    font-size: 20px;
-    font-weight: 700;
-    font-weight: bold;
-}
+    .fontStyleH6
+    {
+        line-height: normal;
+        line-height: 28.13px;
+        font-size: 25px;
+        letter-spacing: 2%;
+        font-weight: 600;
+    }
 
-.fontStyleP
-{
-    line-height: 32px;
-    font-size: 20px;
-    font-weight: 300;
-    letter-spacing: 0;
+    .fontStyleH7
+    {
+        line-height: normal;
+        line-height: 25.14px;
+        font-size: 20px;
+        font-weight: 700;
+        font-weight: bold;
+    }
+
+    .fontStyleP
+    {
+        line-height: 32px;
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 0;
+    }
 }
 
 
