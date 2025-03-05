@@ -22,14 +22,14 @@
                         <div>
                             <h1 class="fontStyleH6 fontColorPrimary">Unternehmen</h1>
                             <a class="fontStyleFooterLink fontColorLight" href="/">Home</a><br/>
-                            <a class="fontStyleFooterLink fontColorLight" href="/Ueber-uns">Über uns</a><br/>
-                            <a class="fontStyleFooterLink fontColorLight" href="/Modelle">Modelle</a><br/>
+                            <a class="fontStyleFooterLink fontColorLight" href="/ueber-uns">Über uns</a><br/>
+                            <a class="fontStyleFooterLink fontColorLight" href="/modelle">Modelle</a><br/>
         
                         </div>
                         <div>
                             <h1 class="fontStyleH6 fontColorPrimary">Rechtliches</h1>
-                            <a class="fontStyleFooterLink fontColorLight" href="/Impressum">Impressum</a><br/>
-                            <a class="fontStyleFooterLink fontColorLight" href="/Datenschutz">Datenschutz</a><br/>
+                            <a class="fontStyleFooterLink fontColorLight" href="/impressum">Impressum</a><br/>
+                            <a class="fontStyleFooterLink fontColorLight" href="/datenschutz">Datenschutz</a><br/>
                             <a class="fontStyleFooterLink fontColorLight" href="/kontakt">Kontakt</a><br/>
                         </div>
         
