@@ -1,14 +1,58 @@
 import { json } from '@sveltejs/kit';
 const nodemailer = await import('nodemailer');
 import { config } from 'dotenv';
+import validator from 'validator';
+import sanitizeHtml from 'sanitize-html';
 config(); // Load .env variables
 
-export async function POST({ request }) {
+export async function POST({ request } : any) {
     try {
-        const { email } = await request.json();
-        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            return json({ error: 'Bitte eine gültige E-Mail angeben' }, { status: 400 });
-        }
+        const { email, name, company, phone, subject, msg } = await request.json();
+        let errors: Record<string, string> = {};
+        
+        if (!validator.isEmail(email))
+            errors.email = 'Bitte eine gültige E-Mail angeben';
+
+        if (/[\r\n]/.test(email))
+            errors.email = 'Bitte eine gültige E-Mail angeben';
+
+        if (/[\r\n]/.test(name))
+            errors.message = 'Bitte einen gültigen Namen angeben';
+
+        const sanitizedEmail = sanitizeHtml(email, { allowedTags: [], allowedAttributes: {} });
+        
+        const sanitizedName = sanitizeHtml(name, { allowedTags: [], allowedAttributes: {} });
+        if(sanitizedName.length == 0)
+            errors.name = 'Bitte einen Namen angeben';
+        if(sanitizedName.length > 1000)
+            errors.name = 'Der Name ist zu lang (maximal 1.000 Zeichen)';
+
+        const sanitizedCompany = sanitizeHtml(company, { allowedTags: [], allowedAttributes: {} });
+        if(sanitizedCompany.length == 0)
+            errors.company = 'Bitte einen Firmennamen angeben';
+        if(sanitizedCompany.length > 255)
+            errors.company = 'Der Firmenname ist zu lang (maximal 255 Zeichen)';
+
+        const sanitizedSubject = sanitizeHtml(subject, { allowedTags: [], allowedAttributes: {} });
+        if(sanitizedSubject.length == 0)
+            errors.subject = 'Bitte einen Betreff angeben.';
+        if(sanitizedSubject.length > 1000)
+            errors.subject = 'Der Betreff ist zu lang (maximal 1.000 Zeichen)';
+        
+        const sanitizedPhone = sanitizeHtml(phone, { allowedTags: [], allowedAttributes: {} });
+        if(sanitizedPhone.length == 0)
+            errors.phone = 'Bitte eine Telefonnummer angeben.';
+        if(sanitizedPhone.length > 255)
+            errors.phone = 'Die Telefonnummer ist zu lang (maximal 255 Zeichen)';
+
+        const sanitizedMessage = sanitizeHtml(msg, { allowedTags: [], allowedAttributes: {} });
+        if(sanitizedMessage.length == 0)
+            errors.message = 'Bitte eine Nachricht angeben.';
+        if(sanitizedMessage.length > 50000)
+            errors.message = 'Die Nachricht ist zu lang (maximal 50.000 Zeichen)';
+        
+        if (Object.keys(errors).length > 0) 
+            return json({ errors }, { status: 400 });
 
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
@@ -23,8 +67,18 @@ export async function POST({ request }) {
         await transporter.sendMail({
             from: process.env.SMTP_FROM,
             to: process.env.SMTP_TO,
-            subject: 'Cubic-Cube - neue Anfrage',
-            text: `Jemand möchte in Kontakt treten: ${email}`,
+            subject: 'Cubic-Cube - neue Anfrage per Kontaktformular',
+            text: `Jemand möchte in Kontakt treten: 
+            
+            \r\n\r\n Betreff: ${sanitizedSubject} 
+            \r\n\ Name: ${sanitizedName}  
+            \r\n\ Firma: ${sanitizedCompany}
+            \r\n\ Telefon: ${sanitizedPhone}
+            \r\n\ E-Mail: ${sanitizedEmail}
+
+            \r\n\ Nachricht: \r\n\r\n
+            
+            ${sanitizedMessage}`,
         });
 
         return json({ success: true });

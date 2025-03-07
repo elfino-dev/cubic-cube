@@ -205,6 +205,10 @@
     color: var(--colors-color3);
 }
 
+.fontColorC2
+{
+    color: var(--colors-color2);
+}
 .fontColorC5
 {
     color: var(--colors-color5);

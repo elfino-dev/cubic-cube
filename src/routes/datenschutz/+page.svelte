@@ -2,7 +2,6 @@
     import Header from './../SectionHeader.svelte';
     import './../../css/global.css';
 	import Footer from './../Footer.svelte';
-    import KontaktFrame from './DatenschutzBody.svelte';
 	import DatenschutzeHeader from './DatenschutzeHeader.svelte';
     import DatenschutzeBody from './DatenschutzBody.svelte';
 </script>
