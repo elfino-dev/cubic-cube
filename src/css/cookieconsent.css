@@ -1,0 +1,33 @@
+#cc-main {
+    --cc-bg: #203238;
+    /** Change font **/
+    --cc-font-family: "Source Sans 3", sans-serif;
+    --cc-primary-color: white;
+    --cc-secondary-color: white;
+
+    /** Change button primary color to black **/
+    --cc-btn-primary-bg: #A6D760;
+    --cc-btn-primary-color: #203238;
+    --cc-btn-primary-border-color: transparent;
+    --cc-btn-primary-hover-bg: #587278;
+    --cc-btn-primary-hover-color: white;
+    --cc-btn-primary-hover-border-color: transparent;
+
+    --cc-btn-secondary-bg: white;
+    --cc-btn-secondary-color: #203238;
+    --cc-btn-secondary-border-color: transparent;
+    --cc-btn-secondary-hover-bg: #587278;
+    --cc-btn-secondary-hover-color: white;
+    --cc-btn-secondary-hover-border-color: transparent;
+
+    --cc-cookie-category-block-bg: #203238;
+    --cc-cookie-category-block-border: white;
+    --cc-cookie-category-block-hover-bg: #587278;
+    --cc-cookie-category-block-hover-border: white;
+
+    /** Also make toggles the same color as the button **/
+    --cc-toggle-on-bg: var(--cc-btn-primary-bg);
+
+    /** Make the buttons a bit rounder **/
+    --cc-btn-border-radius: 10px;
+}

@@ -79,14 +79,14 @@
         <p class="fontStyleH3 fontColorLight largeHeadline">Die Kofferlösung für Rohrreiniggungs- <br/>und Inspektionsfahrzeuge</p>
         
             <div class="specialCars {customClass}">
-            <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 <AdornerBox customClass="box1" customStyle="position: absolute; bottom: 300px; right: 500px; opacity: 0"></AdornerBox>
                 <AdornerBox customClass="box2" customStyle="position: absolute; bottom: 300px; right: -100px; opacity: 0"></AdornerBox>
                 <AdornerBox customClass="box3" customStyle="position: absolute; bottom: -100px; right: 700px; opacity: 0"></AdornerBox>
                 <AdornerBox customClass="box4" customStyle="position: absolute; bottom: -150px; right: -150px; opacity: 0"></AdornerBox>
-                <CarConfigurationBox link="/modelle#mittelHochdachInspektion" title="CubicCube" buzzwords="Inspektionsfahrzeug (TV-Wagen)" description="Modularer Kofferaufbau als Hochdachfür einen mittleren Radstand(3 Module)" imgSrc="{car1}"></CarConfigurationBox>
-                <CarConfigurationBox link="/modelle#langHochdachInspektion" title="CubicCube" buzzwords="Spülfahrzeug" description="Modularer Kofferaufbau als Hochdach für einen langen Radstand (4 Module)" imgSrc="{car2}"></CarConfigurationBox>
-                <CarConfigurationBox link="/modelle#langHochdachInspektion" title="CubicCube" buzzwords="Inspektions- und Spülfahrzeug" description="Modularer Kofferaufbau als Hochdach für einen langen Radstand (4 Module)" imgSrc="{car2}"></CarConfigurationBox>
+                <CarConfigurationBox link="/modelle#inspektionsFahrzeugTVWagen" title="CubicCube" buzzwords="Inspektionsfahrzeug (TV-Wagen)" description="Modularer Kofferaufbau als Hochdachfür einen mittleren Radstand(3 Module)" imgSrc="{car1}"></CarConfigurationBox>
+                <CarConfigurationBox link="/modelle" title="CubicCube" buzzwords="Spülfahrzeug" description="Modularer Kofferaufbau als Hochdach für einen langen Radstand (4 Module)" imgSrc="{car2}"></CarConfigurationBox>
+                <CarConfigurationBox link="/modelle#inspektionsUndSpuelfahrzeug" title="CubicCube" buzzwords="Inspektions- und Spülfahrzeug" description="Modularer Kofferaufbau als Hochdach für einen langen Radstand (4 Module)" imgSrc="{car2}"></CarConfigurationBox>
             </div>
         </div>
     </div>

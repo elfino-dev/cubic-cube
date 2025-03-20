@@ -13,7 +13,7 @@
 
 </script>
 
-<ProdukteSingleSpecification 
+<!-- <ProdukteSingleSpecification 
         anchorID="kurz" 
         backgroundColor="#415D63"
         backgroundCellColor="#587278" 
@@ -30,7 +30,7 @@
         weight="4t" 
         material="Aluminiumverkleidung">
     <div slot="information">Flachdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Hochdach erhältlich</b></div>
-</ProdukteSingleSpecification>
+</ProdukteSingleSpecification> --> 
 
 <ProdukteSingleSpecification 
         anchorID="mittel" 
@@ -39,16 +39,16 @@
         title="Mittlerer Radstand" 
         desc="Unser Allrounder" 
         carImage={cc2} 
-        moduleCount="2" 
+        moduleCount="3" 
         maxLength="6150 mm" 
         maxWidth="2150 mm" 
         maxHeight="2770 mm" 
         cubeLength="3600 mm" 
         cubeWidth="2150 mm" 
         cubeHeight="1950 mm" 
-        weight="4t" 
+        weight="5t" 
         material="Aluminiumverkleidung">
-    <div slot="information">Flachdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Hochdach erhältlich</b></div>
+    <div slot="information">Flachdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Hochdach und optional als Spülfahrzeug erhältlich!</b></div>
 </ProdukteSingleSpecification>
 
 <ProdukteSingleSpecification 
@@ -58,16 +58,16 @@
         title="Mittlerer Radstand, Hochdach" 
         desc="Für mehr Geräumigkeit" 
         carImage={cc3} 
-        moduleCount="2" 
+        moduleCount="3" 
         maxLength="6150 mm" 
         maxWidth="2150 mm" 
         maxHeight="2940 mm" 
         cubeLength="3600 mm" 
         cubeWidth="2150 mm" 
         cubeHeight="2120 mm"  
-        weight="4t" 
+        weight="5t" 
         material="Aluminiumverkleidung">
-    <div slot="information">Hochdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Flachdach erhältlich</b></div>
+    <div slot="information">Hochdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Flachdach und optional als Spülfahrzeug erhältlich!</b></div>
 </ProdukteSingleSpecification>
 
 <ProdukteSingleSpecification 
@@ -77,16 +77,16 @@
         title="Langer Radstand" 
         desc="Lässt keine Wünsche offen!" 
         carImage={cc4} 
-        moduleCount="2" 
+        moduleCount="3" 
         maxLength="6870 mm" 
         maxWidth="2150 mm" 
         maxHeight="2770 mm" 
         cubeLength="4260 mm" 
         cubeWidth="2150 mm" 
-        cubeHeight="1950mm" 
-        weight="4 t"
+        cubeHeight="1950 mm" 
+        weight="5t"
         material="Aluminiumverkleidung">
-    <div slot="information">Flachdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Hochdach erhältlich</b></div>
+    <div slot="information">Flachdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Hochdach und optional als Spülfahrzeug erhältlich!</b></div>
 </ProdukteSingleSpecification>
 
 <ProdukteSingleSpecification 
@@ -96,56 +96,55 @@
         title="Langer Radstand, Hochdach" 
         desc="Unser größter Cube" 
         carImage={cc5} 
-        moduleCount="2" 
+        moduleCount="3" 
         maxLength="6870 mm" 
         maxWidth="2150 mm" 
         maxHeight="2940 mm" 
         cubeLength="4260 mm" 
         cubeWidth="2150 mm" 
         cubeHeight="2120 mm" 
-        weight="4t" 
+        weight="5t" 
         material="Aluminiumverkleidung">
-    <div slot="information">Hochdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Flachdach erhältlich</b></div>
+    <div slot="information">Hochdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Flachdach und optional als Spülfahrzeug erhältlich!</b></div>
 </ProdukteSingleSpecification>
 
 <ProdukteSingleSpecification 
-        anchorID="mittelHochdachInspektion" 
+        anchorID="inspektionsFahrzeugTVWagen" 
         backgroundColor="#587278"
         backgroundCellColor="#415D63" 
-        title="Mittlerer Radstand, Inspektionsfahrzeug, Hochdach" 
-        desc="Unser Inspektionsfahrzeug mit mittlerem Radstand" 
+        title="Inspektionsfahrzeug (TV-Wagen)" 
+        desc="Unser Inspektionsfahrzeug als TV Wagen" 
         carImage={kc1} 
-        moduleCount="2" 
-        maxLength="5,267 m" 
-        maxWidth="2,345 m" 
-        maxHeight="2,120 m" 
-        cubeLength="3,180 m" 
-        cubeWidth="2,150 m" 
-        cubeHeight="1,950 m" 
-        weight="4 t"
+        moduleCount="3" 
+        maxLength="6150 mm" 
+        maxWidth="2150 mm" 
+        maxHeight="2940 mm" 
+        cubeLength="3600 mm" 
+        cubeWidth="2150 mm" 
+        cubeHeight="2120 mm"  
+        weight="5t" 
         material="Aluminiumverkleidung">
     <div slot="information">Hochdach, Einzelräder, nur als Hydraulikwagen.</div>
 </ProdukteSingleSpecification>
 
 <ProdukteSingleSpecification 
-        anchorID="langHochdachInspektion" 
+        anchorID="inspektionsUndSpuelfahrzeug" 
         backgroundColor="#415D63"
         backgroundCellColor="#587278"
-        title="Langer Radstand, Inspektionsfahrzeug, Hochdach" 
-        desc="Unser größtes Inspektionsfahrzeug" 
+        title="Inspektions- und Spülfahrzeug" 
+        desc="Vereint Inspektions- und Spülfahrzeug" 
         carImage={kc2} 
-        moduleCount="2" 
-        maxLength="5,267 m" 
-        maxWidth="2,345 m" 
-        maxHeight="2,120 m" 
-        cubeLength="3,180 m" 
-        cubeWidth="2,150 m" 
-        cubeHeight="1,950 m" 
-        weight="4 t" 
+        moduleCount="4" 
+        maxLength="6870 mm" 
+        maxWidth="2150 mm" 
+        maxHeight="2940 mm" 
+        cubeLength="4260 mm" 
+        cubeWidth="2150 mm" 
+        cubeHeight="2120 mm" 
+        weight="5t" 
         material="Aluminiumverkleidung">
     <div slot="information">Hochdach, Einzelräder, nur als Hydraulikwagen.</div>
 </ProdukteSingleSpecification>
-
 
 <style>
 

@@ -7,19 +7,19 @@
 
 <div class="pageWrapper"> 
     <div class="pageContent">
-        <div class="grid grid-cols-1 xl:grid-cols-5 xl:gap-[70px] carConfigurationGrid">
+        <div class="grid grid-cols-1 md:grid-cols-5 md:gap-[70px] carConfigurationGrid">
             
-            <div class="xl:col-span-3" style="border-radius: 35px; overflow: auto;">
+            <div class="md:col-span-3" style="border-radius: 35px; overflow: auto;">
                 <img src={Image}>
             </div>
-            <div class="xl:col-span-2">
+            <div class="md:col-span-2">
                 <p class="fontStyleH6 fontColorC3 smallHeadline">Das ist CubicCube</p>
-                <p class="fontStyleH3 fontColorLight largeHeadline">Warum Sie sich<br/>für CubicCube <br/>entscheiden sollen</p>               
+                <p class="fontStyleH3 fontColorLight largeHeadline">Warum Sie sich für CubicCube entscheiden sollen</p>               
                 <div class="fontStyleP fontColorLight description">
-                    CubicCube ist die Antwort auf Ihre Suche nach einer innovativen Nutzfahrzeug-Kofferlösung. Im Gegensatz zu herkömmlichen Kofferaufbauten mit fester Struktur bietet CubicCube mehr Flexibiliät und Anpassungsmöglichkeiten.
+                    CubicCube ist die Antwort auf Ihre Suche nach einer modernen Nutzfahrzeug-Kofferlösung. Im Gegensatz zu herkömmlichen Kofferaufbauten mit fester Struktur bietet CubicCube mehr Flexibiliät und Anpassungsmöglichkeiten.
                     <br/>
                     <br/>
-                    Die Marke "CubicCube" bedeutet wortwörtlich ”Kubikwürfel“ und vereint zwei Zentrale Eigenschaften: “Kubik“ als Raummaß steht für das großzügige Raumangebot. “Würfel“ als Sinnbild für die modulare Struktur und Anpassungsfähigkeit unserer Koffer.
+                    Die Marke &bdquo;CubicCube&ldquo; bedeutet wortwörtlich &bdquo;Kubikwürfel&ldquo; und vereint zwei Zentrale Eigenschaften: &bdquo;Kubik&ldquo; als Raummaß steht für das großzügige Raumangebot. &bdquo;Würfel&ldquo; als Sinnbild für die modulare Bauweise und Vielseitigkeit unserer Koffer.
                 </div>
             </div>
         </div>
@@ -35,6 +35,12 @@
     .description
     {
         margin-top: 30px;
+    }
+
+    @media (width < 48rem) { 
+        .smallHeadline{
+            margin-top: 20px;
+        }   
     }
     
 </style>

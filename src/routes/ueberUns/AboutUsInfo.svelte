@@ -8,8 +8,8 @@
     <div class="pageContent">
 
         <div class="carDetailWrapper">
-            <div class="singleCar grid grid-cols-2 gap-[20px]">
-                <div style='background-image: url("{car2}"); background-position: 50% 100%; background-repeat: no-repeat;'>
+            <div class="singleCar grid grid-cols-1 xl:grid-cols-2 gap-[20px]">
+                <div class="singleCarImage" style='background-image: url("{car2}"); background-position: 50% 100%; background-repeat: no-repeat;'>
 
                 </div>
                 <div>
@@ -31,18 +31,28 @@ Als innovatives Start-Up Unternehmen und Teil der elfino-Group mit Sitz in der T
     .carDetailWrapper
     {
         position: relative;
-        height: 449px;
-    }
-
-    .carDetailWrapper .singleCar
-    {
-        width: 100%;
-        position: absolute;
     }
 
     .largeHeadline
     {
         margin-top: 10px;
         margin-bottom: 50px;
+    }
+
+    @media (width >= 80rem) 
+    {
+        .singleCarImage
+        {
+            width: 96%; height: 100%;
+        }
+    }
+
+    @media (width < 80rem) 
+    {
+        .singleCarImage
+        {
+            height: 35vw;
+            margin-bottom: 20px;
+        }
     }
 </style>

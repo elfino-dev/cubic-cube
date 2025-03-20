@@ -7,6 +7,8 @@
     import elfinoIcon from '$lib/assets/images/Footer/elfinoLogo.png';
     
     let { customClass = '' } = $props();
+
+    let year = new Date().getFullYear();
 </script>
 
 <div>
@@ -57,7 +59,7 @@
     <div class="pageWrapper backgroundColor5 copyrightFooter">  
         <div class="pageContent">
             <div class="fontColorLight footerCopyright">
-                © 2024 elfino family group GmbH & Co. KG. 
+                © {year} elfino family group GmbH & Co. KG. 
             </div>         
         </div>
     </div>

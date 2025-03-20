@@ -77,6 +77,7 @@ input
     display: inline-block;
     color: var(--colors-light);
     font-size: 17px;
+    max-width: 400px;
 }
 
 @media (max-width: 1279px) 

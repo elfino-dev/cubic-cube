@@ -41,8 +41,8 @@
 <section id="aboutUs">
     <div class="pageWrapper">
         <div class="pageContent">
-            <div class="grid grid-cols-1 xl:grid-cols-5">
-                <div class="aboutUs xl:col-span-3">
+            <div class="grid grid-cols-1 lg:grid-cols-5">
+                <div class="aboutUs lg:col-span-3">
                     <p class="fontStyleH6 fontColorC3 smallHeadline">CubicCube ist einzigartig</p>
                     <p class="fontStyleH3 fontColorLight largeHeadline">Flexible Lösungen durch modulare Bauweise</p>
                 
@@ -63,7 +63,7 @@
                     </div>
                     
                 </div>
-                <div class="carWrapper xl:col-span-2" >
+                <div class="carWrapper">
                     <div class="aboutUsCar">
                     </div>
                     <div class="aboutUsCarBorder">
@@ -128,7 +128,7 @@
         position: relative;
     }
 
-    @media (min-width: 1280px) 
+    @media (width >= 64rem)
     {    
         .aboutUsCarBorder
         {
@@ -165,46 +165,10 @@
         }
     }
 
-    @media (max-width: 1279px) 
+    @media (width < 64rem)
     {    
         .carWrapper{
-            top:60px;
-            height: 579px;
-        }
-
-        .aboutUsCar
-        {
-            height: calc(100% * 0.8);
-            aspect-ratio: 1 / 1;     
-            
-            transform: rotate(45deg);
-            margin: auto;
-
-            position: absolute;
-            border: 3px solid var(--colors-primary);
-            border-radius: 100px;
-            left: 300px;
-            opacity: 0;
-
-            border-radius: 35px; 
-            border: none;
-        }
-
-        .aboutUsCarBorder
-        {
-            height: calc(100% * 0.8);
-            aspect-ratio: 1 / 1;     
-            
-            transform: rotate(45deg);
-            margin: auto;
-
-            position: absolute;
-            left: -100px;
-            opacity: 0;
-
-            background: url("$lib/assets/images/AboutUs/AboutUsCar.png") no-repeat;
-            background-size: 85% 85%;
-            background-position: 50% 50%;
+            display: none;
         }
     }
 

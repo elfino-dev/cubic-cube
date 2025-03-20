@@ -10,11 +10,11 @@
             <p class="fontStyleH6 fontColorC3 smallHeadline">{title}</p>
             <p class="fontStyleH3 fontColorLight largeHeadline">{desc}</p>       
 
-            <div class="grid grid-cols-1 xl:grid-cols-5" style="border-bottom: 2px solid {backgroundCellColor};">
-                <div class="xl:col-span-3 productsCar">
-                    <div style="background-image: url({carImage}); background-repeat:no-repeat; background-position: 0% 100%; width: 96%; height: 96%; background-size: contain; margin-top: 2%;"></div>       
+            <div class="grid grid-cols-1 lg:grid-cols-5" style="border-bottom: 2px solid {backgroundCellColor};">
+                <div class="lg:col-span-3 productsCar">
+                    <div class="productsCarImage" style="background-image: url({carImage}); background-repeat:no-repeat; background-position: 0% 100%; background-size: contain;"></div>       
                 </div>
-                <div class="xl:col-span-2 productsCar">
+                <div class="lg:col-span-2 productsCar">
                     <div class="grid grid-cols-3 gap-[6px]">
                         <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">Module</div><div class="specificationContent fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{moduleCount}</div>
                         <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">max. Länge</div><div class="specificationContent  fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{maxLength}</div>
@@ -52,11 +52,6 @@
         padding: 50px 0;
     }
 
-    .grid
-    {
-        margin-top: 50px;
-    }
-
     .specificationTitle
     {
         font-weight: bold;
@@ -69,6 +64,30 @@
         text-align: center;
         padding:10px;
     }
+
+    .largeHeadline
+    {
+        margin-bottom: 20px;
+    }
+
+    @media (width >= 64rem) 
+    {
+        .productsCarImage
+        {
+            width: 96%; height: 100%;
+        }
+    }
+
+    @media (width < 64rem) 
+    {
+        .productsCarImage
+        {
+            height: 35vw;
+            margin-bottom: 20px;
+        }
+    }
+    
+
 
     
 </style>
