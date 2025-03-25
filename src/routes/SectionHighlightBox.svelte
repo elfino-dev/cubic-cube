@@ -2,9 +2,7 @@
     import '../css/global.css';
 
     let { title, body, icon, isHighlightedByDefault = false } = $props();
-    let isHighlighted = $state(isHighlightedByDefault);
-
-    
+    let isHighlighted = $state(isHighlightedByDefault);    
 </script>
 
 <div 
@@ -12,6 +10,7 @@
     onmouseenter={() => isHighlighted = true }
     onmouseleave={() => isHighlighted = false }
     aria-pressed={isHighlighted} 
+    role="button"
     tabindex="0">
     <div class="highlightBoxIcon">
         <img src={icon} alt="frontIcon"/>

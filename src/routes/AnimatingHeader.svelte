@@ -65,7 +65,7 @@
             <a class="align-middle pageButton" href="/modelle">Modelle</a>
             <a class="align-middle pageButton" href="/kontakt">Kontakt</a>
             <div class="align-middle">
-                <Button link="/kontakt#kontaktFrame" customStyle="font-weight: bold;">Jetzt beraten lassen</Button>  
+                <Button link="/kontakt#kontaktFrame" customStyle="font-weight: bold;" onClick={() => {}}>Jetzt beraten lassen</Button>  
             </div>
         </div>
     </div>

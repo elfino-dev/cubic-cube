@@ -10,7 +10,7 @@
         <div class="grid grid-cols-1 md:grid-cols-5 md:gap-[70px] carConfigurationGrid">
             
             <div class="md:col-span-3" style="border-radius: 35px; overflow: auto;">
-                <img src={Image}>
+                <img src={Image} alt="teaser">
             </div>
             <div class="md:col-span-2">
                 <p class="fontStyleH6 fontColorC3 smallHeadline">Das ist CubicCube</p>

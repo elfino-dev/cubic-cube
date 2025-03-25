@@ -75,21 +75,13 @@ Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden 
 
 
 <style>
-    ul
+    .fontStyleH3
     {
-        padding-left: 20px; 
-        list-style: disc; 
-    }
-
-    .fontStyleH3{
         margin-bottom: 30px;
     }
 
-    .fontStyleH4{
-        margin-bottom: 15px;
-    }
-
-    .fontStyleP{
+    .fontStyleP
+    {
         line-height: 25px;
     }
 

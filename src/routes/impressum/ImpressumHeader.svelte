@@ -91,10 +91,4 @@
     {
         height: 100%;
     }
-
-    .teaserContentWrapper > *
-    {
-        width: 100%;
-        text-align: center;
-    }
 </style>

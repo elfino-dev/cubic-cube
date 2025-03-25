@@ -274,26 +274,7 @@
         flex-grow: 1;
         flex-direction: column;
     }
-
-    .back > div > span
-    {
-        margin: 15px;
-    }
-
-
-    .front img
-    {
-        height: 50px;
-        margin-bottom: 20px;
-    }
-
-    .back img
-    {        
-        position: absolute;
-        height: 80%;
-        z-index: -1;
-    }
-
+    
     .back {
         background: var(--colors-color2);
         color: white;
@@ -318,20 +299,6 @@
     {
         color: var(--colors-primary);
         font-weight: bold;
-    }
-
-    .buttonWrapper button
-    {
-        display: inline-block;
-        padding:10px; 
-        background-color:var(--colors-primary);
-        color:var(--colors-color2); 
-        text-align: center;
-        height: 40px;
-        line-height: 20px;
-        cursor: pointer;
-        font-size: 18px;
-        font-weight: 400;
     }
 
     input, textarea

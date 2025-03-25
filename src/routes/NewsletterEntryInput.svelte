@@ -1,8 +1,6 @@
 <script>
-    import Button from './Button.svelte';
-    import Arrow from "$lib/assets/images/Common/Arrow.svelte";
+     import Arrow from "$lib/assets/images/Common/Arrow.svelte";
 
-    import { onMount } from 'svelte';
     let email = '';
     let successMessage = '';
     let errorMessage = '';
@@ -182,25 +180,6 @@
         height: 100%;
         flex-grow: 1;
         flex-direction: column;
-    }
-
-    .back > div > span
-    {
-        margin: 15px;
-    }
-
-
-    .front img
-    {
-        height: 50px;
-        margin-bottom: 20px;
-    }
-
-    .back img
-    {        
-        position: absolute;
-        height: 80%;
-        z-index: -1;
     }
 
     .back {

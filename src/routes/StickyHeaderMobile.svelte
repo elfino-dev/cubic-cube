@@ -20,9 +20,9 @@
     <div class="mobileMenuContent {isHamburgerMenuOpened ? "open" : ""}">
         <div class="grid grid-rows-5 h-screen">
             <div></div>
-            <a class="align-middle pageButton" href="/ueberUns" on:click={closeMenu}>Über uns</a>
-            <a class="align-middle pageButton" href="/modelle" on:click={closeMenu}>Modelle</a>
-            <a class="align-middle pageButton" href="/kontakt" on:click={closeMenu}>Kontakt</a>
+            <a class="align-middle pageButton" href="/ueberUns" onclick={closeMenu}>Über uns</a>
+            <a class="align-middle pageButton" href="/modelle" onclick={closeMenu}>Modelle</a>
+            <a class="align-middle pageButton" href="/kontakt" onclick={closeMenu}>Kontakt</a>
             <div class="align-middle">
                 <Button link="/kontakt#kontaktFrame" customStyle="width: 80%; margin-left: 10%; font-weight: bold;" onClick={closeMenu}>Jetzt beraten lassen</Button>  
             </div>
@@ -35,12 +35,12 @@
                     <a href="/"><img alt="Cubic Cube" src={logo} /></a>
                 </div>
                 <div class="hamburgerMenuColumn" >
-                    <a href="#" on:click={handleClick} aria-label="hamburgerMenu" id="hamburgerMenu" class="justify-self-end {isHamburgerMenuOpened ? "open" : ""}">
+                    <button onclick={handleClick} aria-label="hamburgerMenu" id="hamburgerMenu" class="justify-self-end {isHamburgerMenuOpened ? "open" : ""}">
                         <div></div>
                         <div></div>
                         <div></div>
                         <div></div>                
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -170,7 +170,6 @@
         height: 91px; 
     }
 
-    .headerGrid > a,
     .headerGrid > div
     {
         margin: auto;

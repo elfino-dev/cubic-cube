@@ -1,5 +1,8 @@
-<script lang="ts">   
-    let { link, customStyle = '', onClick } = $props();
+<script lang="ts">
+	import { render } from "svelte/server";
+
+   
+    let { link, customStyle = '', onClick, children } = $props();
 
     function handleClicked(event: MouseEvent) 
     {
@@ -8,8 +11,8 @@
     }
 </script>
 
-<a href="{link}" style="{customStyle}" on:click={handleClicked}>
-    <slot></slot>
+<a href="{link}" style="{customStyle}" onclick={handleClicked}>
+    {@render children()}
 </a>
 
 <style>

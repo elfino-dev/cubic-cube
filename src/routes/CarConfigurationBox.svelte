@@ -20,9 +20,9 @@
         <img src="{imgSrc}" alt={title} style="padding-top: 40px; padding-bottom: 40px;"/>
         <div class="carTitle fontStyleH6 fontColorPrimary">{title}</div>
         <div class="carBuzzwords fontStyleH4 fontColorLight">{buzzwords}</div>
-        <div class="carDescription fontStyleP fontColorLight ">{description}</div>
+        <div class="carDescription fontStyleP fontColorLight">{description}</div>
 
-        <a href="{link}"></a>
+        <a href="{link}" aria-label="ConfigurationLink"></a>
     </div>    
 </div>
 

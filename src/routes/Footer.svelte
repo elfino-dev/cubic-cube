@@ -26,7 +26,7 @@
         <div class="pageContent">
             <div class="grid grid-cols-1 xl:grid-cols-5 xl:gap-6">
                 <div class="col-span-2">
-                    <img src={footerIcon} id="footerImage"/>
+                    <img src={footerIcon} id="footerImage" alt="footer logo"/>
                     <NewsletterEntryInput></NewsletterEntryInput>
                 </div>
                 <div class="col-span-3">
@@ -43,7 +43,7 @@
                             <a class="fontStyleFooterLink fontColorLight" href="/impressum">Impressum</a><br/>
                             <a class="fontStyleFooterLink fontColorLight" href="/datenschutz">Datenschutz</a><br/>
                             <a class="fontStyleFooterLink fontColorLight" href="/kontakt">Kontakt</a><br/>
-                            <a class="fontStyleFooterLink fontColorLight" on:click={CookieConsent.showPreferences}>Cookies</a>
+                            <button class="fontStyleFooterLink fontColorLight" on:click={CookieConsent.showPreferences}>Cookies</button>
                             
 	                        
                         </div>
