@@ -14,6 +14,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Add server's SSH key to known hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+
+
       - name: Upload files via SCP
         run: |
           scp -r ./ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }}:/var/www/elfino/cubic-cube/
