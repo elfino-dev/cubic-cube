@@ -3,7 +3,7 @@ name: Deploy App
 on:
   push:
     branches:
-      - main  # Trigger deploy when pushing to the main branch
+      - master  # Trigger deploy when pushing to the main branch
 
 jobs:
   build:
