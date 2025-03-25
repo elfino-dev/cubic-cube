@@ -20,7 +20,7 @@ jobs:
         with:
           source: './'
           destination: '/var/www/elfino/cubic-cube/'
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          password: ${{ secrets.SERVER_PASSWORD }}
           remote_host: ${{ secrets.SERVER_IP }}
           remote_user: ${{ secrets.SERVER_USER }}
 
@@ -30,7 +30,7 @@ jobs:
         with:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             cd /var/www/elfino/cubic-cube/
             docker build -t cubic-cube .
