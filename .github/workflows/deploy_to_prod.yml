@@ -1,0 +1,39 @@
+name: Deploy App
+
+on:
+  push:
+    branches:
+      - main  # Trigger deploy when pushing to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Upload the code to the server
+      - name: Upload code to server
+        uses: scottbrenner/rsync-action@v0.0.5
+        with:
+          source: './'
+          destination: '/var/www/elfino/cubic-cube/'
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          remote_host: ${{ secrets.SERVER_IP }}
+          remote_user: ${{ secrets.SERVER_USER }}
+
+      # SSH into your server to build and run the Docker container
+      - name: Build and Deploy on Server
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /var/www/elfino/cubic-cube/
+            docker build -t cubic-cube .
+            docker stop cubic-cube || true
+            docker rm cubic-cube || true
+            docker run --env-file .env -p 3500:3500 cubic-cube #todo - create env on the fly with secrets.
