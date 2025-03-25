@@ -24,7 +24,7 @@ jobs:
         run: |
           # Explicitly enable password authentication for SCP
           export SSHPASS="${{ secrets.SERVER_PASSWORD }}"
-          sshpass -e scp -r ./ user@${{ secrets.SERVER_IP }}:/var/www/elfino/cubic-cube/
+          sshpass -e scp -r ./ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }}:/var/www/elfino/cubic-cube/
 
       # SSH into your server to build and run the Docker container
       - name: Build and Deploy on Server
