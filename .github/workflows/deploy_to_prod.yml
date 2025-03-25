@@ -47,4 +47,4 @@ jobs:
             docker build -t cubic-cube .
             docker stop cubic-cube || true
             docker rm cubic-cube || true
-            docker run -d --env-file .env -p 3500:3500 cubic-cube #todo - create env on the fly with secrets.
+            docker run -d --env-file .env --name cubic-cube -p 3500:3500 cubic-cube
