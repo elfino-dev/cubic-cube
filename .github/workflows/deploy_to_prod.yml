@@ -14,15 +14,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Upload the code to the server
-      - name: Upload code to server
-        uses: scottbrenner/rsync-action@v0.0.5
+      - name: Upload files via SCP
+        uses: webfactory/ssh-agent@v0.5.3
         with:
-          source: './'
-          destination: '/var/www/elfino/cubic-cube/'
           password: ${{ secrets.SERVER_PASSWORD }}
-          remote_host: ${{ secrets.SERVER_IP }}
-          remote_user: ${{ secrets.SERVER_USER }}
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+
+      - name: Copy files to the server
+        run: |
+          scp -r ./ user@${{ secrets.SERVER_IP }}:/var/www/elfino/cubic-cube/
 
       # SSH into your server to build and run the Docker container
       - name: Build and Deploy on Server
