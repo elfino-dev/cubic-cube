@@ -16,7 +16,7 @@ jobs:
 
       - name: Upload files via SCP
         run: |
-          scp -r ./ user@${{ secrets.SERVER_IP }}:/var/www/elfino/cubic-cube/
+          scp -r ./ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }}:/var/www/elfino/cubic-cube/
         env:
           SERVER_PASSWORD: ${{ secrets.SERVER_PASSWORD }}
 
