@@ -1,8 +1,14 @@
-<script>   
-    let { link, customStyle = '' } = $props();
+<script lang="ts">   
+    let { link, customStyle = '', onClick } = $props();
+
+    function handleClicked(event: MouseEvent) 
+    {
+        if(onClick !== undefined)
+            onClick(event);
+    }
 </script>
 
-<a href="{link}" style="{customStyle}">
+<a href="{link}" style="{customStyle}" on:click={handleClicked}>
     <slot></slot>
 </a>
 
@@ -17,6 +23,6 @@
         line-height: 20px;
         cursor: pointer;
         font-size: 18px;
-        font-weight: 400;
+        font-weight: bold;
     }
 </style>

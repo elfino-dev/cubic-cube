@@ -6,7 +6,17 @@
     import footerIcon from '$lib/assets/images/Footer/FooterIcon.png';
     import elfinoIcon from '$lib/assets/images/Footer/elfinoLogo.png';
     
-    let { customClass = '' } = $props();
+    import { onMount } from 'svelte';
+	import * as CookieConsent from 'vanilla-cookieconsent';
+	import config from '$lib/cookieConsent/cookieconsent-config';
+	import 'vanilla-cookieconsent/dist/cookieconsent.css';
+
+	/**
+	 * Only run plugin on the client side
+	 */
+	onMount(() => {
+		CookieConsent.run(config);
+	});
 
     let year = new Date().getFullYear();
 </script>
@@ -24,7 +34,7 @@
                         <div>
                             <h1 class="fontStyleH6 fontColorPrimary">Unternehmen</h1>
                             <a class="fontStyleFooterLink fontColorLight" href="/">Home</a><br/>
-                            <a class="fontStyleFooterLink fontColorLight" href="/ueber-uns">Über uns</a><br/>
+                            <a class="fontStyleFooterLink fontColorLight" href="/ueberUns">Über uns</a><br/>
                             <a class="fontStyleFooterLink fontColorLight" href="/modelle">Modelle</a><br/>
         
                         </div>
@@ -33,6 +43,9 @@
                             <a class="fontStyleFooterLink fontColorLight" href="/impressum">Impressum</a><br/>
                             <a class="fontStyleFooterLink fontColorLight" href="/datenschutz">Datenschutz</a><br/>
                             <a class="fontStyleFooterLink fontColorLight" href="/kontakt">Kontakt</a><br/>
+                            <a class="fontStyleFooterLink fontColorLight" on:click={CookieConsent.showPreferences}>Cookies</a>
+                            
+	                        
                         </div>
         
                         <div>
@@ -85,6 +98,7 @@ h1
 
 .fontStyleFooterLink
 {
+    cursor: pointer;
     height: 40px;
     line-height: 40px;
     margin: auto;

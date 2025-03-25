@@ -39,6 +39,6 @@ export async function POST({ request } : any) {
         return json({ success: true });
     } catch (error) {
         console.error(error);
-        return json({ error: 'Fehler beim senden.' }, { status: 500 });
+        return json({ error: 'Fehler beim Senden.' }, { status: 500 });
     }
 }

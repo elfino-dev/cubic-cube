@@ -5,10 +5,8 @@
 </script>
 
 <div class="pageWrapper">
-    <div class="square1" style="--square-color: {leftSquareColor};"></div>>
-
-    <div class="square3" style="border-color: {rightSquareColor}"></div>
-
+    <div class="square1" style="--square-color: {leftSquareColor};"></div>
+    <div class="square2" style="border-color: {rightSquareColor}"></div>
 
     <div class="pageContent">
         <div class="content"> 
@@ -66,7 +64,7 @@
         content: '';
     }
 
-    .square3
+    .square2
     {
         position: absolute;
         max-width: 618px;

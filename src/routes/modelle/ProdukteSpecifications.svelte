@@ -36,7 +36,7 @@
         anchorID="mittel" 
         backgroundColor="#587278"
         backgroundCellColor="#415D63"
-        title="Mittlerer Radstand" 
+        title="Mittlerer Radstand, Flachdach" 
         desc="Unser Allrounder" 
         carImage={cc2} 
         moduleCount="3" 
@@ -74,7 +74,7 @@
         anchorID="lang" 
         backgroundColor="#587278"
         backgroundCellColor="#415D63"
-        title="Langer Radstand" 
+        title="Langer Radstand, Flachdach" 
         desc="Lässt keine Wünsche offen!" 
         carImage={cc4} 
         moduleCount="3" 

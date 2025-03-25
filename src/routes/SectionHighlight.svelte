@@ -15,7 +15,7 @@
         <div class="sectionHighlightBox grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-[20px]">
             <HighlightBox icon="{effizient}" body="Unsere CubicCubes sind schnell geliefert und gut durchdacht" title="effizient"></HighlightBox>
             <HighlightBox icon="{modular}" body="Flexible Module ermöglichen einen individuellen Kofferaufbau nach Ihren Bedürfnissen." title="modular"></HighlightBox>
-            <HighlightBox icon="{langlebig}" body="Unsere aus Aluminium gefertigten Kofferaufbauten stehen für mehr Qualität und eine längere Haltbarkeit" title="langlebig"></HighlightBox>
+            <HighlightBox icon="{langlebig}" body="Unsere hochwertig gefertigten Kofferaufbauten stehen für mehr Qualität und eine längere Haltbarkeit" title="langlebig"></HighlightBox>
             <HighlightBox icon="{nachhaltig}" body="Der Umwelt zuliebe sind unsere Koffer langlebig und austauschbar" title="nachhaltig"></HighlightBox>
         </div>
     </div>

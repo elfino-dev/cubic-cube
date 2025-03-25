@@ -107,7 +107,7 @@ const config: CookieConsent.CookieConsentConfig = {
 						{
 							title: 'More information',
 							description:
-								'For any queries in relation to out cookie policy and your choices, please <a href="/kontakt">contact</a> us.'
+								'For any queries in relation to out cookie policy and your choices, please <a href="/kontakt#kontaktFrame">contact</a> us.'
 						}
 					]
 				}
@@ -143,7 +143,7 @@ const config: CookieConsent.CookieConsentConfig = {
 						{
 							title: 'Mehr Informationen',
 							description:
-								'Sie können gerne mit uns über unsere <a href="/kontakt">Kontaktseite</a> mit uns in Kontakt treten.'
+								'Sie können gerne mit uns über unsere <a href="/kontakt#kontaktFrame">Kontaktseite</a> mit uns in Kontakt treten.'
 						}
 					]
 				}

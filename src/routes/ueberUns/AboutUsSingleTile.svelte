@@ -27,6 +27,12 @@
 <style>
     /* Container box to set the sides relative to */
 
+    @media (max-width: 1279px) 
+    {
+        .card .back span{
+            font-size: 18px;
+        }
+    }
 
     .card {
         position: relative;

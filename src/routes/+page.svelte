@@ -1,5 +1,4 @@
 <script>
-    import Header from './SectionHeader.svelte';
     import Teaser from './SectionTeaser.svelte';
     import Highlight from './SectionHighlight.svelte';
     import AboutUs from './AboutUs.svelte';
@@ -11,8 +10,7 @@
     import Team from './Team.svelte';
 	import WhyChooseUs from './WhyChooseUs.svelte';
 	import Footer from './Footer.svelte';
-	import StickyHeader from './StickyHeader.svelte';
-
+    import AnimatingHeader from './AnimatingHeader.svelte';
     
     import cta1 from '$lib/assets/images/Cta/background1.png';
     import cta2 from '$lib/assets/images/Cta/background2.png';
@@ -30,11 +28,10 @@
         <Cta imgSrc="{cta2}" content="Unser Anspruch ist es, die Zukunft mit innovativen Ideen zu gestalten und den Anforderungen des Marktes einen Schritt voraus zu sein." subtext="Frank Rittmann, Geschäftsführer"></Cta>
         <WhyChooseUs></WhyChooseUs>
     </div>
+    <AnimatingHeader></AnimatingHeader>
     <div class="footer">
         <Footer></Footer>
     </div>
-
-    <StickyHeader></StickyHeader>
 </div>
 
 <style>

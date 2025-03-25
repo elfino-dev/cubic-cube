@@ -2,9 +2,9 @@
 	import '../app.css';
 	import '../css/cookieconsent.css';
 	let { children } = $props();
-	import CookieConsentComponent from '$lib/cookieConsent/cookieconsent.svelte'; 
+    import StickyHeaderMobile from './StickyHeaderMobile.svelte';
 </script>
 
-{@render children()}
+<StickyHeaderMobile></StickyHeaderMobile>
 
-<CookieConsentComponent />
+{@render children()}

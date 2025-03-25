@@ -22,6 +22,8 @@
                 body: JSON.stringify({ email, name, subject, phone, company, msg })
             });
 
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+
             const data = await res.json();
             if (!res.ok) {
                 if (data.errors) {
@@ -49,7 +51,8 @@
 
 <div class="pageWrapper">
     <div class="pageContent">
-        <div class="grid grid-cols-1 xl:grid-cols-5 gap-[40px]">
+        <section id="kontaktFrame">
+            <div class="grid grid-cols-1 xl:grid-cols-5 gap-[40px]">
             <div class="contactText xl:col-span-2">
                 <p class="fontStyleH6 fontColorC3 smallHeadline">Entdecken Sie CubicCube</p>
                 <p class="fontStyleH3 fontColorLight largeHeadline">Lassen Sie sich beraten!</p>
@@ -86,7 +89,7 @@
                 
                 
             </div>
-            <div class="contactForm fontColorLight fontStyleP xl:col-span-3" >
+            <div class="contactForm fontColorLight fontStyleP xl:col-span-3"> 
                 <h1 class=fontStyleH3>Kontakt</h1>
                 <div>Schreiben Sie uns eine Nachricht! Wir setzen uns gerne mit Ihnen in Verbindung.</div>
 
@@ -129,28 +132,174 @@
                             {#if errors.message} <p class="error fontColorC3">{errors.message}</p> {/if}
                         </div>
 
-                        <div class="buttonWrapper">
-                            <button type="submit" disabled={loading}>
-                                {#if loading} lädt... {/if}
-                                {#if !loading} Senden {/if}
-                            </button>
+
+                        <div class="card aspect-square transform-gpu {loading ? 'loading': ''} xl:col-span-2">
+                            <div class="content transform-gpu">
+                                <button type="submit" class="front" disabled={loading}>
+                                    <div class="flex flex-column justify-center items-center" style="font-weight: bold;">
+                                        senden
+                                    </div>
+                                </button>
+                                <div class="back">
+                                    <div class="flex flex-column justify-center items-center">
+                                        <div id="preload">
+                                            <div class="cube-loader">
+                                                <div class="cube1 cube"></div>
+                                                <div class="cube2 cube"></div>
+                                                <div class="cube4 cube"></div>
+                                                <div class="cube3 cube"></div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>	
                         </div>
 
                         {#if errors.general}
-                            <p class="error">{errors.general}</p>
+                            <p class="error xl:col-span-2">{errors.general}</p>
                         {/if}
                         {#if success}
-                            <p class="success">Nachricht verschickt!</p>
+                            <p class="success  xl:col-span-2">Nachricht verschickt!</p>
                         {/if}
                     </div>
                 </form>
             </div>
-        </div>
+            </div>
+        </section>
     </div>
 </div>
 
 
 <style>
+
+    .cube-loader {
+        top: 50%;
+        left: 50%;
+        margin-left: -20px;
+        margin-top: -20px;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+    }
+
+    .cube-loader .cube {
+        float: left;
+        width: 50%;
+        height: 50%;
+        position: relative;
+    }
+
+    .cube-loader .cube2 {
+        -webkit-transform: rotateZ(90deg);
+        transform: rotateZ(90deg);
+    }
+
+    .cube-loader .cube4 {
+        -webkit-transform: rotateZ(270deg);
+        transform: rotateZ(270deg);
+    }
+    .cube-loader .cube3 {
+        -webkit-transform: rotateZ(180deg);
+        transform: rotateZ(180deg);
+    }
+
+    .cube-loader .cube:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-animation: foldCubeAngle 2.4s infinite linear both;
+        animation: foldCubeAngle 2.4s infinite linear both;
+        -webkit-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+        background: var(--colors-primary);
+    }
+
+    .cube-loader .cube2:before {
+        -webkit-animation-delay: .3s;
+        animation-delay: .3s;
+    }
+
+    .cube-loader .cube4:before {
+        -webkit-animation-delay: .9s;
+        animation-delay: .9s;
+    }
+
+    .cube-loader .cube3:before {
+        -webkit-animation-delay: .6s;
+        animation-delay: .6s;
+    }
+
+    @keyframes foldCubeAngle{0%,10%{-webkit-transform:perspective(140px) rotateX(-180deg);transform:perspective(140px) rotateX(-180deg);opacity:0}25%,75%{-webkit-transform:perspective(140px) rotateX(0);transform:perspective(140px) rotateX(0);opacity:1}100%,90%{-webkit-transform:perspective(140px) rotateY(180deg);transform:perspective(140px) rotateY(180deg);opacity:0}}
+
+    .card {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 40px;
+    }
+
+    .content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+    }
+
+    .card.loading .content {
+        transform: rotateY( 180deg );
+    }
+
+    .front,
+    .back {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: var(--colors-primary);
+        color: var(--colors-color2);
+        text-align: center;
+        backface-visibility: hidden;
+    }
+
+    .front > div,
+    .back > div
+    {
+        position: relative;
+        flex-grow: 1;
+        height: 100%;
+        flex-grow: 1;
+        flex-direction: column;
+    }
+
+    .back > div > span
+    {
+        margin: 15px;
+    }
+
+
+    .front img
+    {
+        height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .back img
+    {        
+        position: absolute;
+        height: 80%;
+        z-index: -1;
+    }
+
+    .back {
+        background: var(--colors-color2);
+        color: white;
+        transform: rotateY( 180deg );
+        font-size: 20px;
+    }
 
     input.error,
     textarea.error
@@ -162,6 +311,13 @@
     p.error
     {
         color: var(--colors-color3);
+        font-weight: bold;
+    }
+    
+    p.success
+    {
+        color: var(--colors-primary);
+        font-weight: bold;
     }
 
     .buttonWrapper button

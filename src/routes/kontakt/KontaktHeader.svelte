@@ -7,11 +7,8 @@
 </script>
 
 <div class="pageWrapper">
-    <div class="square1" style="border-color: {leftSquareColor}"/>
-    <div class="square2" style="background-color: {leftSquareColor}"/>
-
-    <div class="square3" style="border-color: {rightSquareColor}"/>
-
+    <div class="square1" style="--square-color: {leftSquareColor};"></div>
+    <div class="square2" style="border-color: {rightSquareColor}"></div>
 
     <div class="pageContent">
         <div class="content"> 
@@ -28,7 +25,7 @@
 <style>
     .pageWrapper{
         background: url("$lib/assets/images/Imagebild_Kontakt2.png") no-repeat;
-        background-size: 100% auto;
+        background-size: cover; 
         background-position: 100% 30%;
         position: relative;
     }
@@ -41,39 +38,46 @@
     .square1
     {
         position: absolute;
-        width: 914px;
-        height: 914px;
-        border-radius: 130px;
+        max-width: 914px;
+        max-height: 914px;
+        width: 65vw;
+        height: 65vw;
+        border-radius: min(100px, 10vw);
         z-index: 0;
+        left: max(-150px, -15vw);
+        bottom: max(-500px ,-40vw);
         transform: rotate(45deg);
-        left: -300px;
-        bottom: -520px;
         border-width: 12px;
+        border-color: var(--square-color);
+    }
+
+    .square1::after
+    {
+        background-color: var(--square-color);
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        border-radius: min(100px, 8vw);
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        z-index: 0;        
+        opacity: 0.8;
+        content: '';
     }
 
     .square2
     {
         position: absolute;
-        width: 846px;
-        height: 846px;
-        border-radius: 90px;
+        max-width: 618px;
+        max-height: 618px;
+        width: 50vw;
+        height: 50vw;
+        border-radius: 10vw;
         z-index: 0;
         transform: rotate(45deg);
-        left: -268px;
-        bottom: -500px;
-        opacity: 0.8;
-    }
-
-    .square3
-    {
-        position: absolute;
-        width: 618px;
-        height: 618px;
-        border-radius: 120px;
-        z-index: 0;
-        transform: rotate(45deg);
-        right: -200px;
-        top: -200px;
+        right: -13vw;
+        top: -13vw;
         border-width: 12px;
     }
     

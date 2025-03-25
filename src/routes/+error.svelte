@@ -1,5 +1,4 @@
 <script>
-    import Header from './SectionHeader.svelte';
 	import Footer from './Footer.svelte';
     import ErrorPage from './ErrorPage.svelte';
 </script>
@@ -7,7 +6,6 @@
 
 <div class="contentWrapper">
     <div class="content">
-        <Header></Header>
         <ErrorPage></ErrorPage>
     </div>
     <div class="footer">

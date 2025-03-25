@@ -1,21 +1,20 @@
 <script>
-    import Header from './../SectionHeader.svelte';
     import './../../css/global.css';
 	import Footer from './../Footer.svelte';
     import KontaktHeader from './KontaktHeader.svelte';
     import KontaktFrame from './KontaktFrame.svelte';
-    import KontaktMap from './KontaktMap.svelte';
+    import StickyHeader from '../StickyHeader.svelte'; 
 </script>
 
 <div class="contentWrapper">
     <div class="content">
-        <Header customClass=""></Header>
         <KontaktHeader leftSquareColor="#DE995B" rightSquareColor="#A6D760"></KontaktHeader>
         <KontaktFrame></KontaktFrame>
     </div>
     <div class="footer">
         <Footer></Footer>
     </div>
+    <StickyHeader></StickyHeader>
 </div>
 
 <style>
