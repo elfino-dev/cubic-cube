@@ -30,7 +30,7 @@
             cubeHeight="1950 mm"
             weight="4t" 
             material="Aluminiumverkleidung">
-        <div slot="information">Flachdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Hochdach erhältlich</b></div>
+        <div slot="information">Flachdach<br/><br/><b>Auch als Hochdach erhältlich</b></div>
     </ProdukteSingleSpecification> --> 
 
     <ProdukteSingleSpecification 
@@ -47,9 +47,10 @@
             cubeLength="3600 mm" 
             cubeWidth="2150 mm" 
             cubeHeight="1950 mm" 
-            weight="5t" 
+            weight="5t (zulässiges Gesamtgewicht)" 
             material="Aluminiumverkleidung"
-            information="Flachdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Hochdach und optional als Spülfahrzeug erhältlich!</b>">
+            specials="Im vorderen Modul rechts / links, sowie hinten: Rollläden"
+            information="Flachdach<br/><br/><b>Auch als Hochdach und optional als Spülfahrzeug erhältlich!</b>">
     </ProdukteSingleSpecification>
 
     <ProdukteSingleSpecification 
@@ -66,9 +67,10 @@
             cubeLength="3600 mm" 
             cubeWidth="2150 mm" 
             cubeHeight="2120 mm"  
-            weight="5t" 
+            weight="5t (zulässiges Gesamtgewicht)" 
             material="Aluminiumverkleidung"
-            information="Hochdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Flachdach und optional als Spülfahrzeug erhältlich!</b>">
+            specials="Im vorderen Modul rechts / links, sowie hinten: Rollläden"
+            information="Hochdach<br/><br/><b>Auch als Flachdach und optional als Spülfahrzeug erhältlich!</b>">
     </ProdukteSingleSpecification>
 
     <ProdukteSingleSpecification 
@@ -85,9 +87,10 @@
             cubeLength="4260 mm" 
             cubeWidth="2150 mm" 
             cubeHeight="1950 mm" 
-            weight="5t"
+            weight="5t (zulässiges Gesamtgewicht)" 
             material="Aluminiumverkleidung"
-            information="Flachdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Hochdach und optional als Spülfahrzeug erhältlich!</b>">
+            specials="Im vorderen Modul rechts / links, sowie hinten: Rollläden"
+            information="Flachdach<br/><br/><b>Auch als Hochdach und optional als Spülfahrzeug erhältlich!</b>">
     </ProdukteSingleSpecification>
 
     <ProdukteSingleSpecification 
@@ -104,9 +107,10 @@
             cubeLength="4260 mm" 
             cubeWidth="2150 mm" 
             cubeHeight="2120 mm" 
-            weight="5t" 
+            weight="5t (zulässiges Gesamtgewicht)" 
             material="Aluminiumverkleidung"
-            information="Hochdach, Einzelräder, nur als Hydraulikwagen. <br/><br/><b>Auch als Flachdach und optional als Spülfahrzeug erhältlich!</b>">
+            specials="Im vorderen Modul rechts / links, sowie hinten: Rollläden"
+            information="Hochdach<br/><br/><b>Auch als Flachdach und optional als Spülfahrzeug erhältlich!</b>">
     </ProdukteSingleSpecification>
 
     <ProdukteSingleSpecification 
@@ -123,9 +127,10 @@
             cubeLength="3600 mm" 
             cubeWidth="2150 mm" 
             cubeHeight="2120 mm"  
-            weight="5t" 
+            weight="5t (zulässiges Gesamtgewicht)" 
             material="Aluminiumverkleidung"
-            information="Hochdach, Einzelräder, nur als Hydraulikwagen.">
+            specials="Vorderes Modul in Fahrtrichtung rechts: Türe"
+            information="Hochdach">
     </ProdukteSingleSpecification>
 
     <ProdukteSingleSpecification 
@@ -142,8 +147,9 @@
             cubeLength="4260 mm" 
             cubeWidth="2150 mm" 
             cubeHeight="2120 mm" 
-            weight="5t" 
+            weight="5t (zulässiges Gesamtgewicht)" 
             material="Aluminiumverkleidung"
-            information="Hochdach, Einzelräder, nur als Hydraulikwagen.">
+            specials="Vorderes Modul in Fahrtrichtung rechts: Türe"
+            information="Hochdach">
     </ProdukteSingleSpecification>
 </div>

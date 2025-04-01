@@ -1,7 +1,7 @@
 <script lang="ts">
     import '../../css/global.css';
 
-    let { information, anchorID, backgroundColor, backgroundCellColor, title, desc, moduleCount, maxLength, maxWidth, maxHeight, cubeLength, cubeWidth, cubeHeight, weight, material, carImage  } = $props();
+    let { information, anchorID, backgroundColor, backgroundCellColor, title, desc, moduleCount, maxLength, maxWidth, maxHeight, cubeLength, cubeWidth, cubeHeight, weight, material, carImage, specials  } = $props();
 </script>
 
 <section id="{anchorID}">
@@ -24,7 +24,8 @@
                         <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">Koffer Breite</div><div class="specificationContent fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{cubeWidth}</div>
                         <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">Koffer Höhe</div><div class="specificationContent fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{cubeHeight}</div>
                         <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">Gewicht</div><div class="specificationContent fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{weight}</div>
-                        <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">Material</div><div class="specificationContent fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{material}</div>
+                        <!-- <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">Material</div><div class="specificationContent fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{material}</div> -->
+                        <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">Besonderheiten:</div><div class="specificationContent fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{specials}</div>
                         <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">Information</div><div class="specificationContent fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{@html information}</div>
                     </div>
                 </div>               
