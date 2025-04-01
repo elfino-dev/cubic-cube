@@ -54,7 +54,6 @@ export async function POST({ request } : any) {
         if (Object.keys(errors).length > 0) 
             return json({ errors }, { status: 400 });
 
-        console.log("now sending to SMTP host " + process.env.SMTP_FROM + ":" + process.env.SMTP_PORT + ", using login: " + process.env.SMTP_USER);
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
             port: Number(process.env.SMTP_PORT) || 587,
