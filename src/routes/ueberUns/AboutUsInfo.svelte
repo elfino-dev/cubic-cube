@@ -16,7 +16,7 @@
                     <p class="fontStyleH6 fontColorC3 smallHeadline">CubicCube</p>
                     <p class="fontStyleH3 fontColorLight largeHeadline">Ihr Experte für innovative Aufbauten</p>       
                     <p class="fontColorLight description fontStyleP">
-                        Die CubiCube GmbH wurde mit dem Ziel gegründet, hochwertige Fahrzeugauf- sowie innenausbauten zu entwickeln, die sich durch ihre Modularität und Effizienz auszeichnen.
+                        Die CubiCube GmbH wurde mit dem Ziel gegründet, hochwertige Fahrzeugaufbauten sowie Innenausbauten zu entwickeln, die sich durch ihre Modularität und Effizienz auszeichnen.
 
 Als innovatives Start-Up Unternehmen und Teil der elfino-Group mit Sitz in der Technologieregion Karlsruhe verbindet die CubicCube GmbH Fachwissen aus über 15 Branchen mit Unternehmergeist. Mit einem motivierten Team bestehend aus Ingenieuren, Handwerkern und Entwicklern aus den Bereichen Sondermaschinenbau, Elektrotechnik sowie der Rohr- und Kanalreinigung entwickelt die CubicCube GmbH flexible Kompaktlösungen mit dem Potenzial einen neuen Standard zu setzen.
                     </p>

@@ -25,7 +25,7 @@
                         <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">Koffer Höhe</div><div class="specificationContent fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{cubeHeight}</div>
                         <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">Gewicht</div><div class="specificationContent fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{weight}</div>
                         <!-- <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">Material</div><div class="specificationContent fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{material}</div> -->
-                        <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">Besonderheiten:</div><div class="specificationContent fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{specials}</div>
+                        <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">Merkmale</div><div class="specificationContent fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{specials}</div>
                         <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">Information</div><div class="specificationContent fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{@html information}</div>
                     </div>
                 </div>               
