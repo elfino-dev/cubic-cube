@@ -25,7 +25,7 @@ export async function POST({ request } : any) {
         const data = await response.json();
         console.log(data);
         console.log("Recaptcha score is: " + data.score + ", threshold is '" + process.env.RECAPTCHA_SCORE_THRESHOLD + "'");
-        if(data.score < parseFloat(process.env.RECAPTCHA_SCORE_THRESHOLD || "0.5"))
+        if (data.success && data.score !== undefined && data.score < parseFloat(process.env.RECAPTCHA_SCORE_THRESHOLD || "0.5"))
         {
             return json({ error: 'Recaptcha fehlgeschlagen. Bitte erneut probieren.' }, { status: 400 });
         }
