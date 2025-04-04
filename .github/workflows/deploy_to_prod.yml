@@ -28,6 +28,9 @@ jobs:
           echo "SMTP_PASS=${{ secrets.SMTP_PASS }}" >> .env
           echo "SMTP_FROM=${{ secrets.SMTP_FROM }}" >> .env
           echo "SMTP_TO=${{ secrets.SMTP_TO }}" >> .env
+          echo "RECAPTCHA_SECRET_KEY=${{ secrets.RECAPTCHA_SECRET_KEY }}" >> .env
+          echo "RECAPTCHA_SCORE_THRESHOLD=${{ secrets.RECAPTCHA_SCORE_THRESHOLD }}" >> .env
+          echo "VITE_RECAPTCHA_SITE_KEY=${{ secrets.VITE_RECAPTCHA_SITE_KEY }}" >> .env
 
       - name: Upload files via SCP
         run: |

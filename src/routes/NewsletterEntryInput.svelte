@@ -1,5 +1,9 @@
 <script>
-     import Arrow from "$lib/assets/images/Common/Arrow.svelte";
+    import Arrow from "$lib/assets/images/Common/Arrow.svelte";
+    import { recaptchaToken } from "$lib/stores/recaptchaStore";
+
+    let token;
+    $: recaptchaToken.subscribe(value => token = value);
 
     let email = '';
     let successMessage = '';
@@ -10,11 +14,17 @@
         successMessage = '';
         errorMessage = '';
         loading = true;
+
+        if (!token) {
+            errorMessage = "reCAPTCHA lädt noch... Bitte erneut probieren!";
+            return;
+        }
+
         try {
             const res = await fetch('/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email })
+                body: JSON.stringify({ email, token })
             });
 
             await new Promise((resolve) => setTimeout(resolve, 1000));

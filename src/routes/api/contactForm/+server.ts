@@ -7,9 +7,29 @@ config(); // Load .env variables
 
 export async function POST({ request } : any) {
     try {
-        const { email, name, company, phone, subject, msg } = await request.json();
+        let secretKey = process.env.RECAPTCHA_SECRET_KEY;
+
+        const { email, name, company, phone, subject, msg, token } = await request.json();
         let errors: Record<string, string> = {};
         
+        const formData = new URLSearchParams();
+        formData.append('secret', secretKey);
+        formData.append('response', token);
+
+        const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: formData,
+        });
+    
+        const data = await response.json();
+        console.log(data);
+        console.log("Recaptcha score is: " + data.score + ", threshold is '" + process.env.RECAPTCHA_SCORE_THRESHOLD + "'");
+        if(data.score < parseFloat(process.env.RECAPTCHA_SCORE_THRESHOLD || "0.5"))
+        {
+            return json({ error: 'Recaptcha fehlgeschlagen. Bitte erneut probieren.' }, { status: 400 });
+        }
+
         if (!validator.isEmail(email))
             errors.email = 'Bitte eine gültige E-Mail angeben';
 

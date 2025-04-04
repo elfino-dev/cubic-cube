@@ -6,6 +6,11 @@
     import contactMap from '$lib/assets/images/kontakt/icon_maps_orange.svg';
     import contactPhone from '$lib/assets/images/kontakt/icon_tel_orange.svg';
 
+    import { recaptchaToken } from "$lib/stores/recaptchaStore";
+
+    let token;
+    $: recaptchaToken.subscribe(value => token = value);
+
     let name = '', email = '', subject = '', msg = '', phone = '', company = '';
     let success = false, loading = false;
     let errors: Record<string, string> = {};
@@ -15,11 +20,16 @@
         success = false;
         errors = {};
 
+        if (!token) {
+            errors.general = "reCAPTCHA lädt noch... Bitte erneut probieren!";
+            return;
+        }
+
         try {
             const res = await fetch('/api/contactForm', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, name, subject, phone, company, msg })
+                body: JSON.stringify({ email, name, subject, phone, company, msg, token })
             });
 
             await new Promise((resolve) => setTimeout(resolve, 1000));
