@@ -1,7 +1,5 @@
 <script lang="ts">
     import '../../css/global.css';
-    import Button from './../Button.svelte';
-    import teaser from '$lib/assets/images/TeaserImage.jpg';
 
     let { leftSquareColor, rightSquareColor } = $props();
 </script>

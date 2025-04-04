@@ -106,6 +106,11 @@
         {
             display: none;            
         }
+
+        .pageWrapper
+        {
+            background-position: 72% 0%;
+        }
     }
 
     @media (width >= 60rem) 
@@ -133,14 +138,17 @@
             transform: rotate(45deg);
             border: 10px solid var(--colors-primary);
         }
-    }
 
-    
+        .pageWrapper
+        {
+            background-position: 50% 0%;
+        }
+    }    
 
     .pageWrapper{
         position: relative;
-        background: url("$lib/assets/images/TeaserImage.jpg") no-repeat;
-        background-position: center top;
+        background-image: url("$lib/assets/images/TeaserImage.jpg");
+        background-repeat: no-repeat;
         background-size: auto 100%;
         height: 100vh;
     }
