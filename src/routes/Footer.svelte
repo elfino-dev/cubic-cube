@@ -5,6 +5,9 @@
 
     import footerIcon from '$lib/assets/images/Footer/FooterIcon.png';
     import elfinoIcon from '$lib/assets/images/Footer/elfinoLogo.png';
+
+    import instagramIcon from '$lib/assets/images/Footer/instagramIcon.png';
+    import linkedInIcon from '$lib/assets/images/Footer/linkedInIcon.png';
     
     import { onMount } from 'svelte';
 	import * as CookieConsent from 'vanilla-cookieconsent';
@@ -73,8 +76,14 @@
 
     <div class="pageWrapper backgroundColor5 copyrightFooter">  
         <div class="pageContent">
-            <div class="fontColorLight footerCopyright">
-                © {year} elfino family group GmbH & Co. KG. 
+            <div class="fontColorLight footer">
+                <div class="grid grid-cols-1 xl:grid-cols-2">
+                    <div>© {year} elfino family group GmbH & Co. KG. </div>
+                    <div class="flex justify-end space-x-4 socials">
+                        <div><a href="https://www.linkedin.com/company/cubiccube-gmbh/" target="_blank"><img alt="linkedin" src="{linkedInIcon}"></a></div>
+                        <div><a href="https://www.instagram.com/cubiccube.de/" target="_blank"><img alt="instagram" src="{instagramIcon}"></a></div>
+                    </div>
+                </div>
             </div>         
         </div>
     </div>
@@ -92,10 +101,17 @@ h1
     width: 220px;
 }
 
-.footerCopyright
+.footer
 {
     font-weight: 300;
     font-size: 17px;
+    line-height: 35px !important;
+}
+
+.footer .socials img
+{
+    width: 35px;
+    height: 35px;
 }
 
 .fontStyleFooterLink

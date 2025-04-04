@@ -17,6 +17,10 @@
     scroll-behavior: smooth;
 }
 
+/* recaptcha */
+
+.grecaptcha-badge { visibility: hidden; }
+
 .pageContent 
 {
     max-width: 1400px;
