@@ -26,7 +26,7 @@
     .pageWrapper{
         background: url("$lib/assets/images/Imagebild_Kontakt2.png") no-repeat;
         background-size: cover; 
-        background-position: 100% 30%;
+        background-position: 70% 30%;
         position: relative;
     }
 

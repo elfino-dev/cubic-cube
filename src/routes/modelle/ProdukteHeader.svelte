@@ -24,7 +24,7 @@
     .pageWrapper{
         background: url("$lib/assets/images/Imagebild_CC_Strasse.png") no-repeat;
         background-size: cover;
-        background-position: 50% 55%;
+        background-position: 70% 55%;
         position: relative;
     }
 
