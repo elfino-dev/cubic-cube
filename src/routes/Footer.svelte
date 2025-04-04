@@ -77,9 +77,9 @@
     <div class="pageWrapper backgroundColor5 copyrightFooter">  
         <div class="pageContent">
             <div class="fontColorLight footer">
-                <div class="grid grid-cols-1 xl:grid-cols-2">
-                    <div>© {year} elfino family group GmbH & Co. KG. </div>
-                    <div class="flex justify-end space-x-4 socials">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="copyrightText">© {year} elfino family group GmbH & Co. KG. </div>
+                    <div class="flex space-x-4 socials">
                         <div><a href="https://www.linkedin.com/company/cubiccube-gmbh/" target="_blank"><img alt="linkedin" src="{linkedInIcon}"></a></div>
                         <div><a href="https://www.instagram.com/cubiccube.de/" target="_blank"><img alt="instagram" src="{instagramIcon}"></a></div>
                     </div>
@@ -108,11 +108,51 @@ h1
     line-height: 35px !important;
 }
 
-.footer .socials img
+@media (width < 48rem) 
 {
-    width: 35px;
-    height: 35px;
+    .footer .copyrightText,
+    .footer .socials
+    {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer .socials
+    {
+        margin-top: 10px;
+    }
+
+    .footer .socials img
+    {
+        width: 45px;
+        height: 45px;
+    }
 }
+
+@media (width >= 48rem) 
+{
+    .footer .socials
+    {
+        justify-content: flex-end;
+    }
+
+    .footer
+    {
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 35px !important;
+    }
+
+    .footer .socials img
+    {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+
+
 
 .fontStyleFooterLink
 {
