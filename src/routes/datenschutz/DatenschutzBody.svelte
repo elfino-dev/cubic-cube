@@ -1,10 +1,6 @@
 <script lang="ts">
     import '../../css/global.css';
-    import Button from '../Button.svelte';
-
-    import contactMail from '$lib/assets/images/kontakt/icon_mail_orange.svg';
-    import contactMap from '$lib/assets/images/kontakt/icon_maps_orange.svg';
-    import contactPhone from '$lib/assets/images/kontakt/icon_tel_orange.svg';
+    let obfs = "f"+"."+"r"+"i"+"t"+"t"+"m"+"a"+"n"+"n"+"@"+"c"+"u"+"b"+"i"+"c"+"c"+"u"+"b"+"e"+"."+"d"+"e";
 </script>
 
 <div class="pageWrapper">
@@ -62,7 +58,7 @@ Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Komm
                 76287 Rheinstetten<br/><br/>
                 
                 Telefon: +49 (0) 179 7734973<br/>
-                E-Mail: f.rittmann@cubiccube.de<br/>
+                E-Mail: {obfs}<br/>
             </b>
             <br/><br/>
             Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, E-Mail-Adressen o. Ä.) entscheidet.

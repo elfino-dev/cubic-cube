@@ -18,6 +18,8 @@
 		CookieConsent.run(config);
 	});
 
+    let obfs = "f"+"."+"r"+"i"+"t"+"t"+"m"+"a"+"n"+"n"+"@"+"c"+"u"+"b"+"i"+"c"+"c"+"u"+"b"+"e"+"."+"d"+"e";
+
     let year = new Date().getFullYear();
 </script>
 
@@ -54,7 +56,7 @@
                                 <br/>
                                 76287 Rheinstetten<br/><br/>
                                 M: +49 (0)179-773-49-73 <br/>
-                                E: f.rittmann@cubiccube.de
+                                E: {obfs}
                                 <br/>
                                 <br/>
                                 Teil der:

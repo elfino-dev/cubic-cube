@@ -1,10 +1,7 @@
 <script lang="ts">
     import '../../css/global.css';
-    import Button from '../Button.svelte';
 
-    import contactMail from '$lib/assets/images/kontakt/icon_mail_orange.svg';
-    import contactMap from '$lib/assets/images/kontakt/icon_maps_orange.svg';
-    import contactPhone from '$lib/assets/images/kontakt/icon_tel_orange.svg';
+    let obfs = "f"+"."+"r"+"i"+"t"+"t"+"m"+"a"+"n"+"n"+"@"+"c"+"u"+"b"+"i"+"c"+"c"+"u"+"b"+"e"+"."+"d"+"e";
 </script>
 
 <div class="pageWrapper">
@@ -22,7 +19,7 @@
         <p class="fontStyleP fontColorC3">Kontaktdaten</p>
         <p class="fontStyleP fontColorLight">
             Tel.: +49 (0) 179 7734973<br/>
-E-Mail: f.rittmann@cubiccube.de<br/>
+E-Mail: {obfs}<br/>
 Website: <a href="https://www.cubiccube.de">www.cubiccube.de</a><br/>
         </p>
 

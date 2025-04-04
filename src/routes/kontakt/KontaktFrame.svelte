@@ -8,6 +8,8 @@
 
     import { recaptchaToken } from "$lib/stores/recaptchaStore";
 
+    let obfs = "f"+"."+"r"+"i"+"t"+"t"+"m"+"a"+"n"+"n"+"@"+"c"+"u"+"b"+"i"+"c"+"c"+"u"+"b"+"e"+"."+"d"+"e";
+
     let token;
     $: recaptchaToken.subscribe(value => token = value);
 
@@ -85,7 +87,7 @@
                     <div class="grid grid-cols-5 gap-[20px] contactElements fontColorLight fontStyleP ">
                         <div class="flex flex-row justify-center items-center"><img src={contactMail} alt="mail" style="height: 40px;"/></div>
                         <div class="col-span-4 flex items-center">
-                            f.rittmann@cubiccube.de
+                            {obfs}
                         </div>
                     </div>
 
