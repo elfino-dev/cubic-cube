@@ -78,7 +78,7 @@
         <div class="pageContent">
             <div class="fontColorLight footer">
                 <div class="grid grid-cols-1 md:grid-cols-2">
-                    <div class="copyrightText">© {year} elfino family group GmbH & Co. KG. </div>
+                    <div class="copyrightText">© {year} elfino family group GmbH & Co. KG</div>
                     <div class="flex space-x-4 socials">
                         <div><a href="https://www.linkedin.com/company/cubiccube-gmbh/" target="_blank"><img alt="linkedin" src="{linkedInIcon}"></a></div>
                         <div><a href="https://www.instagram.com/cubiccube.de/" target="_blank"><img alt="instagram" src="{instagramIcon}"></a></div>
