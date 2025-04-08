@@ -40,7 +40,6 @@
             title="Mittlerer Radstand, Flachdach" 
             desc="Unser Allrounder" 
             carImage={cc2} 
-            moduleCount="3" 
             maxLength="6150 mm" 
             maxWidth="2150 mm" 
             maxHeight="2770 mm" 
@@ -48,7 +47,6 @@
             cubeWidth="2150 mm" 
             cubeHeight="1950 mm" 
             weight="5t (zulässiges Gesamtgewicht)" 
-            material="Aluminiumverkleidung"
             specials="Im vorderen Modul rechts / links, sowie hinten: Rollläden"
             information="Flachdach<br/><br/><b>Auch als Hochdach und optional als Spülfahrzeug erhältlich!</b>">
     </ProdukteSingleSpecification>
@@ -60,15 +58,13 @@
             title="Mittlerer Radstand, Hochdach" 
             desc="Für mehr Geräumigkeit" 
             carImage={cc3} 
-            moduleCount="3" 
             maxLength="6150 mm" 
             maxWidth="2150 mm" 
             maxHeight="2940 mm" 
             cubeLength="3600 mm" 
             cubeWidth="2150 mm" 
             cubeHeight="2120 mm"  
-            weight="5t (zulässiges Gesamtgewicht)" 
-            material="Aluminiumverkleidung"
+            weight="5t (zulässiges Gesamtgewicht)"
             specials="Im vorderen Modul rechts / links, sowie hinten: Rollläden"
             information="Hochdach<br/><br/><b>Auch als Flachdach und optional als Spülfahrzeug erhältlich!</b>">
     </ProdukteSingleSpecification>
@@ -79,16 +75,14 @@
             backgroundCellColor="#415D63"
             title="Langer Radstand, Flachdach" 
             desc="Lässt keine Wünsche offen!" 
-            carImage={cc4} 
-            moduleCount="3" 
+            carImage={cc4}
             maxLength="6870 mm" 
             maxWidth="2150 mm" 
             maxHeight="2770 mm" 
             cubeLength="4260 mm" 
             cubeWidth="2150 mm" 
             cubeHeight="1950 mm" 
-            weight="5t (zulässiges Gesamtgewicht)" 
-            material="Aluminiumverkleidung"
+            weight="5t (zulässiges Gesamtgewicht)"
             specials="Im vorderen Modul rechts / links, sowie hinten: Rollläden"
             information="Flachdach<br/><br/><b>Auch als Hochdach und optional als Spülfahrzeug erhältlich!</b>">
     </ProdukteSingleSpecification>
@@ -99,16 +93,14 @@
             backgroundCellColor="#587278"
             title="Langer Radstand, Hochdach" 
             desc="Unser größter Cube" 
-            carImage={cc5} 
-            moduleCount="3" 
+            carImage={cc5}
             maxLength="6870 mm" 
             maxWidth="2150 mm" 
             maxHeight="2940 mm" 
             cubeLength="4260 mm" 
             cubeWidth="2150 mm" 
             cubeHeight="2120 mm" 
-            weight="5t (zulässiges Gesamtgewicht)" 
-            material="Aluminiumverkleidung"
+            weight="5t (zulässiges Gesamtgewicht)"
             specials="Im vorderen Modul rechts / links, sowie hinten: Rollläden"
             information="Hochdach<br/><br/><b>Auch als Flachdach und optional als Spülfahrzeug erhältlich!</b>">
     </ProdukteSingleSpecification>
@@ -119,16 +111,14 @@
             backgroundCellColor="#415D63" 
             title="Inspektionsfahrzeug (TV-Wagen)" 
             desc="Unser Inspektionsfahrzeug als TV Wagen" 
-            carImage={kc1} 
-            moduleCount="3" 
+            carImage={kc1}
             maxLength="6150 mm" 
             maxWidth="2150 mm" 
             maxHeight="2940 mm" 
             cubeLength="3600 mm" 
             cubeWidth="2150 mm" 
             cubeHeight="2120 mm"  
-            weight="5t (zulässiges Gesamtgewicht)" 
-            material="Aluminiumverkleidung"
+            weight="5t (zulässiges Gesamtgewicht)"
             specials="Vorderes Modul in Fahrtrichtung rechts: Türe"
             information="Hochdach">
     </ProdukteSingleSpecification>
@@ -139,16 +129,14 @@
             backgroundCellColor="#587278"
             title="Inspektions- und Spülfahrzeug" 
             desc="Vereint Inspektions- und Spülfahrzeug" 
-            carImage={kc2} 
-            moduleCount="4" 
+            carImage={kc2}
             maxLength="6870 mm" 
             maxWidth="2150 mm" 
             maxHeight="2940 mm" 
             cubeLength="4260 mm" 
             cubeWidth="2150 mm" 
             cubeHeight="2120 mm" 
-            weight="5t (zulässiges Gesamtgewicht)" 
-            material="Aluminiumverkleidung"
+            weight="5t (zulässiges Gesamtgewicht)"
             specials="Vorderes Modul in Fahrtrichtung rechts: Türe"
             information="Hochdach">
     </ProdukteSingleSpecification>

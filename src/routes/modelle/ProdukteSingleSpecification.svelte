@@ -1,7 +1,7 @@
 <script lang="ts">
     import '../../css/global.css';
 
-    let { information, anchorID, backgroundColor, backgroundCellColor, title, desc, moduleCount, maxLength, maxWidth, maxHeight, cubeLength, cubeWidth, cubeHeight, weight, material, carImage, specials  } = $props();
+    let { information, anchorID, backgroundColor, backgroundCellColor, title, desc, maxLength, maxWidth, maxHeight, cubeLength, cubeWidth, cubeHeight, weight, carImage, specials  } = $props();
 </script>
 
 <section id="{anchorID}">
@@ -16,7 +16,6 @@
                 </div>
                 <div class="lg:col-span-2 productsCar">
                     <div class="grid grid-cols-3 gap-[6px]">
-                        <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">Module</div><div class="specificationContent fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{moduleCount}</div>
                         <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">max. Länge</div><div class="specificationContent  fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{maxLength}</div>
                         <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">max. Breite</div><div class="specificationContent fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{maxWidth}</div>
                         <div class="specificationTitle fontColorLight" style="background-color: {backgroundCellColor}">max. Höhe</div><div class="specificationContent fontColorLight col-span-2" style="background-color: {backgroundCellColor}">{maxHeight}</div>

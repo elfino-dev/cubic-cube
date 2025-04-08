@@ -109,7 +109,7 @@
 
         .pageWrapper
         {
-            background-position: 72% 0%;
+            background-position: 62% 0%;
         }
     }
 
