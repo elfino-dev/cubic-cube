@@ -46,8 +46,11 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd /var/www/elfino/cubic-cube/
-            docker build -t cubic-cube .
-            docker stop cubic-cube || true
-            docker rm cubic-cube || true
-            docker run -d --env-file .env --name cubic-cube -p 3500:3500 cubic-cube
+            IMAGE_NAME="cubic-cube"
+            cd /var/www/elfino/$IMAGE_NAME/
+            TAG=${{ github.run_id }}
+            docker build -t $IMAGE_NAME:$TAG .
+            docker stop $IMAGE_NAME || true
+            docker rm $IMAGE_NAME || true
+            docker run -d --env-file .env --name $IMAGE_NAME -p ${{ secrets.DOCKER_PORT_FROM }}:${{ secrets.DOCKER_PORT_TO }} $IMAGE_NAME:$TAG
+            docker images $IMAGE_NAME --format "{{.ID}}" | tail -n +2 | xargs -r docker rmi
